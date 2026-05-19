@@ -288,28 +288,44 @@ const reviews = [
 
 const faqs = [
     {
-        q: "O orçamento é gratuito?",
-        a: "Sim. O orçamento é totalmente gratuito e sem compromisso. Você nos envia as informações pelo WhatsApp ou agendamos uma visita técnica para medição — e devolvemos a proposta detalhada em até 1 dia útil.",
+        q: "Quais as vantagens do alumínio ripado para fachada?",
+        a: "O alumínio ripado para tanto para fachada quanto para outros ambientes oferece versatilidade, pode ser usado em qualquer parede ou porta, ele imita madeira e pode ser instalado em vários ângulos, seu acabamento proporciona encaixe perfeito e invisível.",
     },
     {
-        q: "Atendem toda São Paulo?",
-        a: "Atendemos toda a São Paulo capital e regiões próximas. Para projetos fora da cidade, consulte com a nossa equipe — avaliamos caso a caso conforme o deslocamento e o porte da obra.",
+        q: "Qual a diferença entre vidro laminado e temperado?",
+        a: "O vidro laminado é composto por duas ou mais camadas de vidro com película entre elas, oferecendo maior segurança e isolamento acústico. O vidro temperado é submetido a um processo de aquecimento e resfriamento rápido, tornando-o mais resistente a impactos.",
     },
     {
-        q: "Quanto tempo demora?",
-        a: "Depende do escopo. Box, espelhos e fechamentos pequenos costumam ser instalados em 1 a 3 dias. Esquadrias e fachadas levam de 6 a 15 dias úteis entre fabricação e montagem. O prazo exato vai no orçamento.",
+        q: "Quanto tempo demora a instalação?",
+        a: "Depende do escopo. Box, espelhos e fechamentos pequenos costumam ser instalados em 1 a 3 dias. Esquadrias e fachadas levam mais tempo devido a entrega do material e fabricação. O prazo exato vai no orçamento.",
     },
     {
-        q: "Fazem instalação?",
-        a: "Sim. Cuidamos de tudo: medição, fabricação, transporte e instalação com equipe própria. Você não precisa contratar pedreiro, montador ou serralheiro separados.",
+        q: "Qual linha é melhor, Gold ou Suprema?",
+        a: "A linha Suprema é mais econômica, indicada para projetos simples e com menor exposição. A linha Gold e a 42 têm perfil mais robusto, acabamento superior e é ideal para projetos de alto padrão ou com maior demanda de resistência.",
     },
     {
-        q: "Trabalham com esquadrias?",
-        a: "Sim. Trabalhamos com esquadrias de alumínio sob medida — janelas, portas, fachadas, perfis suprema, linhas 25/30/40 e acabamentos anodizados ou em pintura eletrostática.",
+        q: "Quanto tempo dura em média uma Esquadria de alumínio?",
+        a: "A qualidade do material e a instalação são os fatores principais, depois vem o ambiente e o uso. Em condições normais, uma esquadria de alta qualidade pode durar décadas com manutenção adequada, recomendamos a troca de rolamentos a cada 5 anos bem como uma revisão 1x por ano, aqui somos especialistas tanto em vidro temperado quanto esquadrias de alumínio.",
     },
     {
-        q: "Parcelam?",
-        a: "Sim. Aceitamos parcelamento no cartão e também combinamos divisões em entradas e parcelas conforme o projeto. As condições vão claras no orçamento, sem letras miúdas.",
+        q: "Vidro temperado ou Esquadria de alumínio, qual é melhor",
+        a: "Depende do uso. O vidro temperado é ideal para áreas que exigem resistência a impactos, como box de banheiro e fechamentos de sacada. Já as esquadrias de alumínio são mais indicadas para janelas, portas e fachadas, oferecendo durabilidade e versatilidade no design.",
+    },
+    {
+        q: "Como cuidar do meu Box de vidro temperado para manter a aparência de novo?",
+        a: "Recomenda-se limpar com um pano ou bucha macia e produto de limpeza adequado para vidro. Evite o uso de produtos abrasivos ou lado 'verde da bucha' que possam riscar a superfície, faça uma manutenção regular a cada 2 anos ou quando necessário, abra e feche devagar.",
+    },
+    {
+        q: "Qual é o melhor fechamento de sacada?",
+        a: "O fechamento retrátil é ideal para sacadas amplas, permitindo abertura total ou parcial e também é o mais usado. O vidro precisa ser laminado ou com película de segurança seguindo todas as normas da ABNT, existem outros modelos como o de correr, maxim-ar ou pivotante, depende muito do seu espaço e orçamento.",
+    },
+    {
+        q: "Qual é a durabilidade dos acabamentos em ACM?",
+        a: "Existem vários fatores, como a qualidade do material silicone e instalação no geral, o ambiente e o uso. Em condições normais, o ACM pode durar décadas com manutenção adequada e limpeza periódica, com esponjas e panos macios e sem produtos abrasivos.",
+    },
+    {
+        q: "Fazem espelho com LED?",
+        a: "Sim, fornecemos tanto o modelo com estrutura de alumínio em volta, estilo penteadeira, quanto modelos flutuantes, que podem ser retirados a qualquer momento.",
     },
 ];
 
