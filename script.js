@@ -6,7 +6,7 @@ const trustItems = [
     {
         icon: "zap",
         label: "Atendemos rápido e com agilidade",
-        sub: "Resposta no mesmo dia",
+        sub: "Resposta em 30 min",
     },
     {
         icon: "file-text",
@@ -218,7 +218,7 @@ const processSteps = [
         number: "04",
         icon: "hammer",
         title: "Tudo alinhado, iniciamos a obra",
-        desc: "Execução limpa, acabamento detalhista e entrega no prazo combinado.",
+        desc: "Execução, acabamento detalhista e entrega no prazo combinado.",
         highlight: true,
     },
 ];

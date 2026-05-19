@@ -1068,7 +1068,7 @@ svg {
 
 .review-quote {
     margin: 0;
-    font-size: clamp(1.6rem, 3vw, 1.875rem);
+    font-size: clamp(1.5rem, 1vw, 1.875rem);
     line-height: 1.25;
     font-weight: 500;
 }
