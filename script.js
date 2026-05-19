@@ -105,7 +105,7 @@ const projects = [
         caption: "Apartamento, Moema",
         ratio: "4:5",
         image:
-            "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=78&auto=format&fit=crop&sat=-20",
+            "./image/site box 1.webp",
         description:
             "Box em vidro temperado verde 8 mm com bisotê de 1 cm e kit articulado em inox. Acabamento sem silicone exposto na lateral.",
         specs: {
