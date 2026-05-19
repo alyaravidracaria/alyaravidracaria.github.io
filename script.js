@@ -43,12 +43,12 @@ const services = [
 const projects = [
     {
         id: "p01",
-        category: "Vidro Temperado",
+        category: "Fachadas de ripado",
         title: "Fechamento em vidro temperado incolor",
         caption: "Sala de estar, Vila Madalena",
         ratio: "4:5",
         image:
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=78&auto=format&fit=crop",
+            "./image/Ripado-2.webp",
         description:
             "Painel de vidro temperado incolor de 10 mm com lapidação reta e ferragens em inox escovado. Execução limpa, sem chumbamento, com acabamento detalhado nas extremidades.",
         specs: {
@@ -67,7 +67,7 @@ const projects = [
         caption: "Edifício residencial, Pinheiros",
         ratio: "1:1",
         image:
-            "https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=1200&q=78&auto=format&fit=crop",
+            "./image/Guarda-corpo-2.webp",
         description:
             "Esquadria sob medida em alumínio com pintura eletrostática preto fosco, vidro laminado 6 mm e roldanas reforçadas. Vedação acústica e térmica reforçadas.",
         specs: {
@@ -84,9 +84,9 @@ const projects = [
         category: "Fachada de Ripado",
         title: "Fachada ripada em alumínio amadeirado",
         caption: "Comercial, Vila Olímpia",
-        ratio: "16:9",
+        ratio: "4:5",
         image:
-            "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80&auto=format&fit=crop",
+            "./image/Ripado-1.webp",
         description:
             "Painel ripado em alumínio com acabamento amadeirado, fixado em estrutura metálica oculta. Espaçamento técnico calculado para conforto térmico e identidade visual.",
         specs: {
@@ -120,11 +120,11 @@ const projects = [
     {
         id: "p05",
         category: "Fachada ACM",
-        title: "Revestimento em ACM cinza grafite",
+        title: "Fachada em ACM Azul e amarelo vibrante",
         caption: "Loja, Itaim Bibi",
         ratio: "16:9",
         image:
-            "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80&auto=format&fit=crop",
+            "./image/ACM 2.webp",
         description:
             "Revestimento em ACM 4 mm com pintura PVDF e estrutura tubular galvanizada. Recortes precisos, juntas alinhadas a régua e acabamento de fresa de 90°.",
         specs: {
@@ -138,12 +138,12 @@ const projects = [
     },
     {
         id: "p06",
-        category: "Espelho Sob Medida",
+        category: "Esquadrias de alumínio",
         title: "Espelho com moldura preta industrial",
         caption: "Hall social, Higienópolis",
         ratio: "4:5",
         image:
-            "https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=1200&q=78&auto=format&fit=crop",
+            "./image/Esquadria-4.webp",
         description:
             "Espelho cristal lapidado 5 mm com bisotê de 2 cm e moldura em aço pintado preto fosco. Fixação invisível por estrutura traseira.",
         specs: {
@@ -160,9 +160,9 @@ const projects = [
         category: "Sacada de Vidro",
         title: "Sacada com fechamento retrátil",
         caption: "Cobertura, Jardins",
-        ratio: "16:9",
+        ratio: "4:5",
         image:
-            "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1600&q=80&auto=format&fit=crop",
+            "./image/Sacada-1.webp",
         description:
             "Fechamento retrátil em vidro temperado 8 mm, com sistema de 6 folhas deslizantes e dobráveis. Trilhos em alumínio anodizado e regulagem milimétrica.",
         specs: {
@@ -176,12 +176,88 @@ const projects = [
     },
     {
         id: "p08",
-        category: "Esquadrias de Alumínio",
+        category: "Guarda-corpo de vidro",
         title: "Porta de correr ampla com perfil mínimo",
         caption: "Residência, Alto de Pinheiros",
-        ratio: "1:1",
+        ratio: "4:5",
         image:
-            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=78&auto=format&fit=crop",
+            "./image/Guarda-corpo-1.webp",
+        description:
+            "Porta de correr de perfil mínimo, vidro temperado laminado 8+8 mm, ferragens reforçadas e acabamento anodizado preto. Vão livre amplo, deslizamento suave.",
+        specs: {
+            service: "Porta de correr suprema",
+            thickness: "Perfil 2 mm",
+            dimensions: "3,60 m × 2,30 m",
+            hardware: "Roldanas dupla via, fechadura de embutir",
+            finish: "Alumínio anodizado preto",
+            time: "Fabricação + instalação em 9 dias",
+        },
+    },
+    {
+        id: "p09",
+        category: "Box de vidro temperado",
+        title: "BOX",
+        caption: "Residência, Alto de Pinheiros",
+        ratio: "9:16",
+        image:
+            "./image/site-box-2.webp",
+        description:
+            "Porta de correr de perfil mínimo, vidro temperado laminado 8+8 mm, ferragens reforçadas e acabamento anodizado preto. Vão livre amplo, deslizamento suave.",
+        specs: {
+            service: "Porta de correr suprema",
+            thickness: "Perfil 2 mm",
+            dimensions: "3,60 m × 2,30 m",
+            hardware: "Roldanas dupla via, fechadura de embutir",
+            finish: "Alumínio anodizado preto",
+            time: "Fabricação + instalação em 9 dias",
+        },
+    },
+    {
+        id: "p10",
+        category: "Esquadria de alumínio",
+        title: "Janela de correr",
+        caption: "Residência, Alto de Pinheiros",
+        ratio: "9:16",
+        image:
+            "./image/Esquadria-2.webp",
+        description:
+            "Porta de correr de perfil mínimo, vidro temperado laminado 8+8 mm, ferragens reforçadas e acabamento anodizado preto. Vão livre amplo, deslizamento suave.",
+        specs: {
+            service: "Porta de correr suprema",
+            thickness: "Perfil 2 mm",
+            dimensions: "3,60 m × 2,30 m",
+            hardware: "Roldanas dupla via, fechadura de embutir",
+            finish: "Alumínio anodizado preto",
+            time: "Fabricação + instalação em 9 dias",
+        },
+    },
+    {
+        id: "p11",
+        category: "Vidro temperado",
+        title: "Telhado de vidro",
+        caption: "Residência, Alto de Pinheiros",
+        ratio: "9:16",
+        image:
+            "./image/Vidro temperado 1.webp",
+        description:
+            "Porta de correr de perfil mínimo, vidro temperado laminado 8+8 mm, ferragens reforçadas e acabamento anodizado preto. Vão livre amplo, deslizamento suave.",
+        specs: {
+            service: "Porta de correr suprema",
+            thickness: "Perfil 2 mm",
+            dimensions: "3,60 m × 2,30 m",
+            hardware: "Roldanas dupla via, fechadura de embutir",
+            finish: "Alumínio anodizado preto",
+            time: "Fabricação + instalação em 9 dias",
+        },
+    },
+    {
+        id: "p12",
+        category: "Vidro temperado",
+        title: "Telhado de vidro",
+        caption: "Residência, Alto de Pinheiros",
+        ratio: "9:16",
+        image:
+            "./image/Vidro temperado 2.webp",
         description:
             "Porta de correr de perfil mínimo, vidro temperado laminado 8+8 mm, ferragens reforçadas e acabamento anodizado preto. Vão livre amplo, deslizamento suave.",
         specs: {
