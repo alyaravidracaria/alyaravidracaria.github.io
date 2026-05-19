@@ -37,7 +37,7 @@ const services = [
     "Acabamento em ACM",
     "Box",
     "Espelho",
-    "Sacadas",
+    "Sacada/Guarda corpo",
 ];
 
 const projects = [
@@ -258,6 +258,25 @@ const projects = [
         ratio: "9:16",
         image:
             "./image/Vidro temperado 2.webp",
+        description:
+            "Porta de correr de perfil mínimo, vidro temperado laminado 8+8 mm, ferragens reforçadas e acabamento anodizado preto. Vão livre amplo, deslizamento suave.",
+        specs: {
+            service: "Porta de correr suprema",
+            thickness: "Perfil 2 mm",
+            dimensions: "3,60 m × 2,30 m",
+            hardware: "Roldanas dupla via, fechadura de embutir",
+            finish: "Alumínio anodizado preto",
+            time: "Fabricação + instalação em 9 dias",
+        },
+    },
+    {
+        id: "p13",
+        category: "Esquadria de alumínio",
+        title: "Porta Lateral",
+        caption: "Residência, Alto de Pinheiros",
+        ratio: "9:16",
+        image:
+            "./image/Esquadria-1.webp",
         description:
             "Porta de correr de perfil mínimo, vidro temperado laminado 8+8 mm, ferragens reforçadas e acabamento anodizado preto. Vão livre amplo, deslizamento suave.",
         specs: {
