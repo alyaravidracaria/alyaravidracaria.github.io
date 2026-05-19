@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vidraçaria Alyara · Vidro, Esquadrias e Fachadas em SP</title>
+    <meta
+        name="description"
+        content="Vidro, esquadrias e fachadas sob medida em São Paulo. Orçamento prático e rápido, preço justo e execução limpa."
+    >
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app" data-testid="alyara-landing">
+        <header class="site-header" data-testid="alyara-header">
+            <div class="container header-bar">
+                <a href="#top" class="brand" data-testid="alyara-logo" aria-label="Alyara">
+                    <span class="alyara-dot"></span>
+                    <span class="brand-name font-display">Alyara</span>
+                    <span class="brand-sub font-mono-tech">Vidraçaria · SP</span>
+                </a>
+
+                <nav class="site-nav" aria-label="Navegação principal">
+                    <a href="#projetos" data-testid="nav-projetos">Projetos</a>
+                    <a href="#sobre" data-testid="nav-sobre">Sobre</a>
+                    <a href="#avaliacoes" data-testid="nav-avaliacoes">Avaliações</a>
+                    <a href="#contato" data-testid="nav-contato">Contato</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a
+                        href="https://wa.me/5511948181368"
+                        target="_blank"
+                        rel="noreferrer"
+                        data-testid="header-cta-whatsapp"
+                        class="alyara-btn-neon"
+                    >
+                        <span data-icon="phone" data-size="16" aria-hidden="true"></span>
+                        Falar agora
+                    </a>
+                </div>
+
+                <button
+                    class="mobile-toggle"
+                    type="button"
+                    data-testid="mobile-menu-toggle"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <span data-icon="menu" data-size="26" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <div class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+                <a href="#projetos">Projetos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#avaliacoes">Avaliações</a>
+                <a href="#contato">Contato</a>
+                <a
+                    href="https://wa.me/5511948181368"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="alyara-btn-neon"
+                >
+                    <span data-icon="phone" data-size="16" aria-hidden="true"></span>
+                    Falar agora
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <section
+                id="top"
+                class="hero"
+                data-testid="alyara-hero"
+                aria-label="Vidraçaria Alyara"
+            >
+                <div class="hero-media" aria-hidden="true">
+                    <img
+                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=2400&q=82&auto=format&fit=crop"
+                        alt=""
+                    >
+                    <div class="hero-overlay"></div>
+                    <div class="hero-grid alyara-tech-grid"></div>
+                </div>
+
+                <div class="container hero-layout">
+                    <div class="hero-copy alyara-reveal">
+                        <div class="hero-kicker">
+                            <span class="alyara-dot alyara-pulse"></span>
+                            <span class="font-mono-tech">Vidraçaria · São Paulo capital</span>
+                        </div>
+
+                        <h1 class="hero-title font-display" data-testid="hero-title">
+                            Atendemos <br>rápido,<br>
+                            com <span>agilidade</span> e <br>
+                            acabamento real.
+                        </h1>
+
+                        <p>
+                            Vidro, esquadrias e fachadas sob medida em São Paulo. Orçamento
+                            prático e rápido, preço justo e execução limpa — sem promessa, com
+                            detalhe.
+                        </p>
+
+                        <div class="hero-chips">
+                            <span class="hero-chip">
+                                <span data-icon="zap" data-size="13" aria-hidden="true"></span>
+                                Atendimento rápido
+                            </span>
+                            <span class="hero-chip">
+                                <span data-icon="file-text" data-size="13" aria-hidden="true"></span>
+                                Orçamento prático
+                            </span>
+                            <span class="hero-chip">
+                                <span data-icon="tag" data-size="13" aria-hidden="true"></span>
+                                Preço justo
+                            </span>
+                        </div>
+
+                        <div class="hero-actions">
+                            <a
+                                href="https://wa.me/5511948181368"
+                                target="_blank"
+                                rel="noreferrer"
+                                data-testid="hero-cta-whatsapp"
+                                class="alyara-btn-neon"
+                            >
+                                Pedir orçamento rápido
+                                <span data-icon="arrow-up-right" data-size="18" aria-hidden="true"></span>
+                            </a>
+                            <a
+                                href="#projetos"
+                                data-testid="hero-cta-projects"
+                                class="alyara-btn-ghost"
+                            >
+                                Ver projetos realizados
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-floating-tag">
+                    <div class="tag-box alyara-glass">
+                        <span class="font-mono-tech" style="color: var(--alyara-accent);">
+                            16 anos · 320+ projetos · SP capital
+                        </span>
+                    </div>
+                </div>
+
+                <div class="scroll-indicator" aria-hidden="true">
+                    <span class="font-mono-tech">rolar</span>
+                    <span class="line"></span>
+                </div>
+            </section>
+
+            <section class="trust-bar" data-testid="alyara-trustbar">
+                <div class="container">
+                    <div class="trust-grid" id="trust-grid"></div>
+                </div>
+            </section>
+
+            <section id="projetos" class="projects section-light" data-testid="alyara-projects">
+                <div class="container">
+                    <div class="section-head">
+                        <div>
+                            <span class="section-kicker font-mono-tech">/ 01 — Projetos realizados</span>
+                            <h2 class="font-display">
+                                Trabalho real, acabamento <br>
+                                que dispensa retoque.
+                            </h2>
+                        </div>
+                        <div>
+                            <p class="section-copy" style="color: var(--alyara-ink-soft);">
+                                Uma seleção objetiva de projetos entregues nos últimos meses.
+                                Toque em qualquer imagem para abrir o detalhe técnico.
+                            </p>
+                            <div class="service-chips" id="project-service-chips"></div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="projects-track no-scrollbar"
+                        data-testid="projects-track"
+                        id="projects-track"
+                        aria-label="Projetos realizados"
+                    ></div>
+
+                    <div class="projects-controls">
+                        <div class="projects-counter font-mono-tech" id="projects-counter"></div>
+                        <div class="controls-row">
+                            <button
+                                class="alyara-arrow is-light"
+                                id="projects-prev"
+                                data-testid="projects-prev"
+                                aria-label="Projeto anterior"
+                            >
+                                <span data-icon="arrow-left" data-size="20" aria-hidden="true"></span>
+                            </button>
+                            <button
+                                class="alyara-arrow is-light"
+                                id="projects-next"
+                                data-testid="projects-next"
+                                aria-label="Próximo projeto"
+                            >
+                                <span data-icon="arrow-right" data-size="20" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="project-modal" id="project-modal" data-testid="project-modal" hidden>
+                <div class="project-modal-backdrop" id="project-modal-backdrop"></div>
+                <div class="project-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                    <button
+                        class="project-modal-close alyara-arrow"
+                        id="project-modal-close"
+                        data-testid="project-modal-close"
+                        aria-label="Fechar modal"
+                    >
+                        <span data-icon="x" data-size="20" aria-hidden="true"></span>
+                    </button>
+                    <div class="project-modal-image">
+                        <img id="modal-image" src="" alt="">
+                    </div>
+                    <div class="project-modal-copy">
+                        <span class="font-mono-tech" id="modal-category" style="color: var(--alyara-accent);"></span>
+                        <h3 class="font-display" id="modal-title"></h3>
+                        <p id="modal-description"></p>
+                        <div class="spec-grid" id="modal-specs"></div>
+                        <a
+                            href="https://wa.me/5511948181368"
+                            target="_blank"
+                            rel="noreferrer"
+                            data-testid="project-modal-cta"
+                            class="alyara-btn-neon"
+                        >
+                            Quero algo parecido
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <section id="sobre" class="about" data-testid="alyara-about">
+                <div class="alyara-tech-grid" style="position: absolute; inset: 0; opacity: 0.6;" aria-hidden="true"></div>
+                <div class="container about-grid">
+                    <div class="about-media alyara-reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=82&auto=format&fit=crop"
+                            alt="Equipe Alyara em obra"
+                            loading="lazy"
+                        >
+                        <div class="about-media-copy">
+                            <div class="font-mono-tech" style="color: var(--alyara-accent);">Equipe em campo</div>
+                            <span class="font-serif-it">Mãos que conhecem cada milímetro.</span>
+                        </div>
+                    </div>
+
+                    <div class="about-copy alyara-reveal">
+                        <span class="section-kicker font-mono-tech">/ 02 — Sobre a Alyara</span>
+                        <h2 class="font-display">
+                            Uma vidraçaria que <br>
+                            <span style="color: var(--alyara-accent);">trabalha como deveria</span>.
+                        </h2>
+                        <div class="section-copy" style="margin-top: 1.75rem;">
+                            <p>
+                                A Alyara é formada por profissionais com 16 anos de atuação em
+                                vidro, alumínio, ACM e ripado. Atendemos São Paulo capital com
+                                foco em projetos sob medida — residenciais, comerciais e empresariais.
+                            </p>
+                            <p>
+                                Trabalhamos com método: medição precisa, orçamento direto, prazo
+                                real e instalação limpa. Cada detalhe importa porque a obra fica
+                                ali, à vista, todos os dias. É por isso que cuidamos do acabamento
+                                como se fosse no nosso próprio espaço.
+                            </p>
+                            <p>
+                                Recomeçamos sob nova marca para entregar o serviço do jeito que
+                                sempre quisemos: rápido, transparente e bem feito.
+                            </p>
+                        </div>
+
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-number font-display">16</div>
+                                <div class="stat-label font-body">anos no ofício</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number font-display">320+</div>
+                                <div class="stat-label font-body">projetos entregues</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number font-display">1h</div>
+                                <div class="stat-label font-body">média de resposta</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number font-display">0</div>
+                                <div class="stat-label font-body">reclamação ativa</div>
+                            </div>
+                        </div>
+
+                        <a
+                            href="https://wa.me/5511948181368"
+                            target="_blank"
+                            rel="noreferrer"
+                            data-testid="about-cta"
+                            class="alyara-btn-ghost"
+                        >
+                            Conversar com a Alyara
+                            <span data-icon="arrow-up-right" data-size="16" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="process" data-testid="alyara-process">
+                <div class="alyara-tech-grid" style="position: absolute; inset: 0; opacity: 0.3;" aria-hidden="true"></div>
+                <div class="container" style="position: relative;">
+                    <div class="section-head">
+                        <div>
+                            <span class="section-kicker font-mono-tech">/ Processo simples</span>
+                            <h2 class="font-display">
+                                Como funciona — <br>
+                                <span style="color: var(--alyara-accent);">sem complicação</span>.
+                            </h2>
+                        </div>
+                        <div>
+                            <p class="section-copy" style="color: rgba(244, 246, 241, 0.72); max-width: 440px;">
+                                Quatro passos curtos, do primeiro contato à entrega da obra.
+                                Atendimento rápido, orçamento prático e preço justo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="process-grid" id="process-grid"></div>
+
+                    <div class="process-cta">
+                        <a
+                            href="https://wa.me/5511948181368"
+                            target="_blank"
+                            rel="noreferrer"
+                            data-testid="process-cta"
+                            class="alyara-btn-neon"
+                        >
+                            Quero começar agora
+                        </a>
+                        <span class="process-note font-body">Resposta em até 1h em horário comercial.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="avaliacoes" class="reviews section-light" data-testid="alyara-reviews">
+                <div class="container reviews-layout">
+                    <div class="reviews-copy">
+                        <span class="section-kicker font-mono-tech">/ 03 — Avaliações</span>
+                        <h2 class="font-display">
+                            O que dizem <br>
+                            quem já contratou.
+                        </h2>
+                        <p class="section-copy">
+                            Avaliações reais de clientes em São Paulo. Algumas em texto, outras
+                            gravadas em áudio — escolha como prefere ouvir.
+                        </p>
+
+                        <div class="reviews-controls">
+                            <button
+                                class="alyara-arrow is-light"
+                                id="reviews-prev"
+                                data-testid="reviews-prev"
+                                aria-label="Avaliação anterior"
+                            >
+                                <span data-icon="arrow-left" data-size="20" aria-hidden="true"></span>
+                            </button>
+                            <button
+                                class="alyara-arrow is-light"
+                                id="reviews-next"
+                                data-testid="reviews-next"
+                                aria-label="Próxima avaliação"
+                            >
+                                <span data-icon="arrow-right" data-size="20" aria-hidden="true"></span>
+                            </button>
+                            <div class="reviews-dots" id="reviews-dots" aria-label="Seletor de avaliações"></div>
+                        </div>
+                    </div>
+
+                    <div class="review-card-wrap">
+                        <article class="review-card alyara-reveal" id="review-card" data-testid="review-card"></article>
+                        <div class="review-ghost" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq" data-testid="alyara-faq">
+                <div class="container faq-layout">
+                    <div class="faq-copy">
+                        <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 0.75rem;">
+                            <span data-icon="help-circle" data-size="14" aria-hidden="true"></span>
+                            <span class="font-mono-tech">/ Perguntas frequentes</span>
+                        </div>
+                        <h2 class="font-display">
+                            Tirou a dúvida? <br>
+                            Já pode pedir <br>
+                            <span style="color: var(--alyara-accent);">orçamento</span>.
+                        </h2>
+                        <p class="section-copy">
+                            Reunimos as perguntas que mais aparecem no WhatsApp. Se ficar alguma,
+                            é só chamar — a gente responde rápido.
+                        </p>
+                        <a
+                            href="https://wa.me/5511948181368"
+                            target="_blank"
+                            rel="noreferrer"
+                            data-testid="faq-cta"
+                            class="alyara-btn-neon"
+                        >
+                            Falar com a equipe
+                        </a>
+                    </div>
+
+                    <div class="faq-card" id="faq-list"></div>
+                </div>
+            </section>
+
+            <section id="contato" class="final-cta" data-testid="alyara-final-cta">
+                <div class="final-cta-inner">
+                    <span class="section-kicker font-mono-tech">/ 04 — Vamos conversar</span>
+                    <h2 class="font-display">
+                        Conte o projeto. <br>
+                        Devolvemos com
+                        <span> orçamento prático e rápido</span>
+                        no mesmo dia.
+                    </h2>
+                    <p class="section-copy">
+                        WhatsApp direto com a equipe da Alyara. Atendemos rápido, com agilidade
+                        e preço justo. Sem formulário longo, sem retorno demorado, sem promessa
+                        que não cumprimos.
+                    </p>
+
+                    <div class="final-cta-actions">
+                        <a
+                            href="https://wa.me/5511948181368"
+                            target="_blank"
+                            rel="noreferrer"
+                            data-testid="final-cta-whatsapp"
+                            class="alyara-btn-neon"
+                        >
+                            <span data-icon="message-circle" data-size="18" aria-hidden="true"></span>
+                            Chamar no WhatsApp
+                        </a>
+                        <a
+                            href="tel:+5511948181368"
+                            data-testid="final-cta-call"
+                            class="alyara-btn-ghost"
+                        >
+                            (11) 94818-1368
+                            <span data-icon="arrow-up-right" data-size="16" aria-hidden="true"></span>
+                        </a>
+                    </div>
+
+                    <div class="final-cta-status font-mono-tech">
+                        <span class="alyara-dot alyara-pulse"></span>
+                        equipe online · seg–sáb · 8h–19h
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer" data-testid="alyara-footer">
+            <div class="container footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="footer-brand-name font-display">
+                            <span class="alyara-dot"></span>
+                            Alyara
+                        </div>
+                        <span class="footer-brand-tag font-serif-it">Qualidade garantida</span>
+                    </div>
+
+                    <p class="footer-copy">
+                        Vidraçaria com 16 anos de experiência em São Paulo. Atendemos rápido,
+                        com agilidade, preço justo e orçamento prático. Vidro, alumínio, ACM,
+                        ripado, box, espelhos e sacadas sob medida.
+                    </p>
+
+                    <div class="footer-social">
+                        <a
+                            href="https://wa.me/5511948181368"
+                            target="_blank"
+                            rel="noreferrer"
+                            data-testid="footer-whatsapp"
+                            aria-label="WhatsApp"
+                        >
+                            <span data-icon="message-circle" data-size="17" aria-hidden="true"></span>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/alyaravidros/"
+                            target="_blank"
+                            rel="noreferrer"
+                            data-testid="footer-instagram"
+                            aria-label="Instagram"
+                        >
+                            <span data-icon="instagram" data-size="17" aria-hidden="true"></span>
+                        </a>
+                        <a
+                            href="mailto:maymayarabonafim@gmail.com"
+                            data-testid="footer-email"
+                            aria-label="E-mail"
+                        >
+                            <span data-icon="mail" data-size="17" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="footer-heading font-mono-tech">Navegação</div>
+                    <ul class="footer-links">
+                        <li><a href="#projetos">Projetos realizados</a></li>
+                        <li><a href="#sobre">Sobre a empresa</a></li>
+                        <li><a href="#avaliacoes">Avaliações</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-heading font-mono-tech">Contato</div>
+                    <ul class="footer-contact">
+                        <li>
+                            <a href="https://wa.me/5511948181368" target="_blank" rel="noreferrer">
+                                <span data-icon="message-circle" data-size="14" aria-hidden="true"></span>
+                                (11) 94818-1368
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:maymayarabonafim@gmail.com">
+                                <span data-icon="mail" data-size="14" aria-hidden="true"></span>
+                                maymayarabonafim@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/alyaravidros/" target="_blank" rel="noreferrer">
+                                <span data-icon="instagram" data-size="14" aria-hidden="true"></span>
+                                @alyaravidros
+                            </a>
+                        </li>
+                        <li>
+                            <span data-icon="map-pin" data-size="14" aria-hidden="true"></span>
+                            Atendimento em toda São Paulo capital
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container footer-bottom">
+                <span class="font-body">© <span id="footer-year"></span> Alyara Vidraçaria · Todos os direitos reservados</span>
+                <span class="footer-bottom-center font-mono-tech">CNPJ 00.000.000/0001-00</span>
+                <a
+                    href="https://www.instagram.com/bms_trafego/"
+                    target="_blank"
+                    rel="noreferrer"
+                    data-testid="footer-dev"
+                    class="footer-dev font-mono-tech"
+                >
+                    Desenvolvido por BMS
+                    <span data-icon="arrow-up-right" data-size="12" aria-hidden="true"></span>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
