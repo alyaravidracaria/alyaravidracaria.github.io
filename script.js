@@ -200,7 +200,7 @@ const projects = [
         caption: "Residência, Alto de Pinheiros",
         ratio: "9:16",
         image:
-            "./image/site-box-2.webp",
+            "./image/Site-box-2.webp",
         description:
             "Porta de correr de perfil mínimo, vidro temperado laminado 8+8 mm, ferragens reforçadas e acabamento anodizado preto. Vão livre amplo, deslizamento suave.",
         specs: {
