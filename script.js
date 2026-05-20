@@ -478,7 +478,7 @@ const ICONS = {
 const state = {
     activeProject: null,
     currentReview: 0,
-    openFaq: 0,
+    openFaq: -1,
     currentAudio: null,
 };
 
@@ -553,13 +553,14 @@ function renderProjects() {
     track.innerHTML = projects
         .map(
             (project, index) => `
-                <button
+                <div
                     class="project-card"
-                    type="button"
                     data-project-index="${index}"
                     data-ratio="${project.ratio}"
                     data-testid="project-card-${index}"
                     aria-label="${project.title}"
+                    role="button"
+                    tabindex="0"
                 >
                     <div class="project-media">
                         <img src="${project.image}" alt="${project.title}" loading="lazy">
@@ -569,19 +570,31 @@ function renderProjects() {
                         </div>
                         <div class="project-copy">
                             <div class="project-title font-serif-it">${project.title}</div>
-                            <div class="project-caption font-body">${project.caption}</div>
+                            <div class="project-copy-meta">
+                                <div class="project-caption font-body">${project.caption}</div>
+                                <a class="project-detail-link font-mono-tech" tabindex="-1" aria-hidden="true">
+                                    Detalhe técnico
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </button>
+                </div>
             `,
         )
         .join("");
 
     counter.textContent = `${String(projects.length).padStart(2, "0")} projetos · arraste ou navegue`;
 
-    track.querySelectorAll("[data-project-index]").forEach((button) => {
-        button.addEventListener("click", () => {
-            openProjectModal(Number(button.dataset.projectIndex));
+    track.querySelectorAll("[data-project-index]").forEach((card) => {
+        card.addEventListener("click", () => {
+            openProjectModal(Number(card.dataset.projectIndex));
+        });
+
+        card.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openProjectModal(Number(card.dataset.projectIndex));
+            }
         });
     });
 }
@@ -741,6 +754,8 @@ function renderReviews() {
     const card = document.getElementById("review-card");
     const dots = document.getElementById("reviews-dots");
     const review = reviews[state.currentReview];
+    const prevButton = document.getElementById("reviews-prev");
+    const nextButton = document.getElementById("reviews-next");
 
     card.innerHTML = `
         <div class="review-stars">
@@ -784,6 +799,9 @@ function renderReviews() {
             renderReviews();
         });
     });
+
+    prevButton.disabled = state.currentReview === 0;
+    nextButton.disabled = state.currentReview === reviews.length - 1;
 
     bindAudioPlayer();
 }
@@ -881,14 +899,22 @@ function bindAudioPlayer() {
 
 function bindReviewControls() {
     document.getElementById("reviews-prev").addEventListener("click", () => {
+        if (state.currentReview === 0) {
+            return;
+        }
+
         stopCurrentAudio();
-        state.currentReview = (state.currentReview - 1 + reviews.length) % reviews.length;
+        state.currentReview -= 1;
         renderReviews();
     });
 
     document.getElementById("reviews-next").addEventListener("click", () => {
+        if (state.currentReview === reviews.length - 1) {
+            return;
+        }
+
         stopCurrentAudio();
-        state.currentReview = (state.currentReview + 1) % reviews.length;
+        state.currentReview += 1;
         renderReviews();
     });
 }

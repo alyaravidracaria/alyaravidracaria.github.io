@@ -604,6 +604,7 @@ svg {
     width: 380px;
     text-align: left;
     scroll-snap-align: start;
+    cursor: pointer;
 }
 
 .project-card[data-ratio="1:1"] {
@@ -668,6 +669,14 @@ svg {
     bottom: 16px;
 }
 
+.project-copy-meta {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 4px;
+}
+
 .project-title {
     font-size: 22px;
     line-height: 1.2;
@@ -675,9 +684,19 @@ svg {
 }
 
 .project-caption {
-    margin-top: 4px;
     font-size: 13px;
     color: rgba(255, 255, 255, 0.7);
+}
+
+.project-detail-link {
+    color: var(--alyara-accent);
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.project-card:hover .project-detail-link,
+.project-card:focus-visible .project-detail-link {
+    color: #e3f078;
 }
 
 .projects-controls {
