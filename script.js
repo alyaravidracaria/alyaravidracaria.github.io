@@ -105,7 +105,7 @@ const projects = [
         caption: "Apartamento, Moema",
         ratio: "4:5",
         image:
-            "./image/site box 1.webp",
+            "./image/Site box 1.webp",
         description:
             "Box em vidro temperado com puxador H de 70cm, kit alumínio reforçado. Acabamento em silicone para vedação.",
         specs: {
