@@ -65,7 +65,7 @@ const projects = [
         category: "Guarda corpo de vidro",
         title: "Guarda corpo em vidro Laminado",
         caption: "Edifício residencial, Pinheiros",
-        ratio: "1:1",
+        ratio: "4:5",
         image:
             "./image/Guarda-corpo-2.webp",
         description:
@@ -81,6 +81,25 @@ const projects = [
     },
     {
         id: "p03",
+        category: "Box de correr",
+        title: "Box de correr até o teto",
+        caption: "Residência, Alto de Pinheiros",
+        ratio: "9:16",
+        image:
+            "./image/box 4.webp",
+        description:
+            "Box de correr 2 folhas até o teto, com puxador discreto e kit instalação reforçado,  alumínio preto.",
+        specs: {
+            service: "Box de correr",
+            thickness: "Vidro  8mm",
+            dimensions: "1,60 m × 2,50 m",
+            hardware: "Kit instalação reforçado com acessórios de alta qualidade",
+            finish: "Silicone para vedação total",
+            time: "Instalação em 1h:30min",
+        },
+    },
+    {
+        id: "p04",
         category: "Fachada de Ripado",
         title: "Porta de entrada Alumínio Ripado",
         caption: "Comercial, Vila Olímpia",
@@ -99,13 +118,13 @@ const projects = [
         },
     },
     {
-        id: "p04",
+        id: "p05",
         category: "Box para Banheiro",
         title: "Box de correr 2 folhas até o teto",
         caption: "Apartamento, Moema",
         ratio: "4:5",
         image:
-            "./image/Site box 1.webp",
+            "./image/box 1.webp",
         description:
             "Box em vidro temperado com puxador H de 70cm, kit alumínio reforçado. Acabamento em silicone para vedação.",
         specs: {
@@ -118,7 +137,7 @@ const projects = [
         },
     },
     {
-        id: "p05",
+        id: "p06",
         category: "Fachada ACM",
         title: "Fachada em ACM Azul e amarelo vibrante",
         caption: "Loja, Cidade Patriarca SP",
@@ -137,8 +156,8 @@ const projects = [
         },
     },
     {
-        id: "p06",
-        category: "Esquadrias de alumínio",
+        id: "p07",
+        category: "Esquadrias de alumínio + Sacada",
         title: "Porta integrada Linha Gold + Guarda corpo de vidro",
         caption: "Hall social, Higienópolis",
         ratio: "4:5",
@@ -156,8 +175,8 @@ const projects = [
         },
     },
     {
-        id: "p07",
-        category: "Sacada de Vidro",
+        id: "p08",
+        category: "Esquadrias de Alumínio",
         title: "Projeto completo - Portas, Janelas, Guarda corpo e +",
         caption: "Cobertura, Jardins",
         ratio: "4:5",
@@ -175,9 +194,9 @@ const projects = [
         },
     },
     {
-        id: "p08",
+        id: "p09",
         category: "Guarda-corpo de vidro",
-        title: "Guarda corpo de vidro proteção de escada",
+        title: "Guarda corpo proteção de escada",
         caption: "Residência, Alto de Pinheiros",
         ratio: "4:5",
         image:
@@ -194,30 +213,30 @@ const projects = [
         },
     },
     {
-        id: "p09",
-        category: "Box de vidro temperado [Trocar foto]",
-        title: "BOX",
+        id: "p10",
+        category: "Box de vidro",
+        title: "Box de correr",
         caption: "Residência, Alto de Pinheiros",
         ratio: "9:16",
         image:
-            "./image/Site-box-2.webp",
+            "./image/Box 2.webp",
         description:
-            "Porta de correr de perfil mínimo, vidro temperado laminado 8+8 mm, ferragens reforçadas e acabamento anodizado preto. Vão livre amplo, deslizamento suave.",
+            " Box de correr com 2 folhas altura padrão de 1,90 m, alumínio preto, design elegante para banheiros simples.",
         specs: {
-            service: "Porta de correr suprema",
-            thickness: "Perfil 2 mm",
-            dimensions: "3,60 m × 2,30 m",
-            hardware: "Roldanas dupla via, fechadura de embutir",
-            finish: "Alumínio anodizado preto",
-            time: "Fabricação + instalação em 9 dias",
+            service: "Box de correr",
+            thickness: "Vidro 8mm",
+            dimensions: "1,60 m × 1,90 m",
+            hardware: "Kit box de instalação com acesssórios de alta qualidade",
+            finish: "Acabamento em silicone para vedação",
+            time: "Instalação em 1 hr",
         },
     },
     {
-        id: "p10",
+        id: "p11",
         category: "Esquadria de alumínio",
         title: "Janela de correr",
         caption: "Residência, Alto de Pinheiros",
-        ratio: "9:16",
+        ratio: "12:16",
         image:
             "./image/Esquadria-2.webp",
         description:
@@ -232,11 +251,11 @@ const projects = [
         },
     },
     {
-        id: "p11",
+        id: "p12",
         category: "Vidro temperado",
         title: "Marquise de vidro",
         caption: "Residência, Alto de Pinheiros",
-        ratio: "9:16",
+        ratio: "4:5",
         image:
             "./image/Vidro temperado 1.webp",
         description:
@@ -248,25 +267,6 @@ const projects = [
             hardware: "Sistema de fixação em haste e ferragens de inox",
             finish: "Acabamento em silicone para vedação",
             time: "Instalação em 1 dia",
-        },
-    },
-    {
-        id: "p12",
-        category: "Vidro temperado",
-        title: "Marquise de vidro",
-        caption: "Residência, Alto de Pinheiros",
-        ratio: "9:16",
-        image:
-            "./image/Vidro temperado 2.webp",
-        description:
-            "Marquise de vidro única, com haste de suporte para fixação. Ideal para portas de entrada.",
-        specs: {
-            service: "Vidro temperado para marquise",
-            thickness: "Vidro de 8 mm",
-            dimensions: "1,10 m × 1,10 m",
-            hardware: "Sistema de fixação em haste e ferragens de inox",
-            finish: "Acabamento em silicone para vedação",
-            time: "Instalação em 2 hrs",
         },
     },
     {
@@ -288,6 +288,45 @@ const projects = [
             time: "Instalação em 1 hr",
         },
     },
+    {
+        id: "p14",
+        category: "Vidro temperado",
+        title: "Marquise de vidro",
+        caption: "Residência, Alto de Pinheiros",
+        ratio: "4:5",
+        image:
+            "./image/Vidro temperado 2.webp",
+        description:
+            "Marquise de vidro única, com haste de suporte para fixação. Ideal para portas de entrada.",
+        specs: {
+            service: "Vidro temperado para marquise",
+            thickness: "Vidro de 8 mm",
+            dimensions: "1,10 m × 1,10 m",
+            hardware: "Sistema de fixação em haste e ferragens de inox",
+            finish: "Acabamento em silicone para vedação",
+            time: "Instalação em 2 hrs",
+        },
+    },
+    {
+        id: "p15",
+        category: "Box de correr",
+        title: "Box de 3 folhas",
+        caption: "Residência, Alto de Pinheiros",
+        ratio: "9:16",
+        image:
+            "./image/box 3.webp",
+        description:
+            "Box de correr com 3 folhas até o teto, puxador H discreto e kit instalação reforçado. Ideal para deixar seu banheiro mais elegante sem sujeira e menos tempo de limpeza.",
+        specs: {
+            service: "Box de correr",
+            thickness: "Vidro  8mm",
+            dimensions: "1,90 m × 2,50 m",
+            hardware: "Kit instalação reforçado com acessórios de alta qualidade",
+            finish: "Silicone para vedação total",
+            time: "Instalação em 1h:30min",
+        },
+    },
+    
 ];
 
 const processSteps = [
@@ -549,10 +588,29 @@ function renderServiceChips() {
 function renderProjects() {
     const track = document.getElementById("projects-track");
     const counter = document.getElementById("projects-counter");
+    const projectCardWidths = {
+        "1:1": 360,
+        "4:5": 330,
+        "9:16": 245,
+        "16:9": 520,
+    };
 
     track.innerHTML = projects
-        .map(
-            (project, index) => `
+        .map((project, index) => {
+            const [ratioWidth, ratioHeight] = (project.ratio || "4:5")
+                .split(":")
+                .map((value) => Number(value));
+            const aspectRatio =
+                ratioWidth > 0 && ratioHeight > 0 ? ratioWidth / ratioHeight : 4 / 5;
+            const fallbackWidth = Math.round(
+                Math.max(240, Math.min(520, 410 * aspectRatio)),
+            );
+            const cardWidth = projectCardWidths[project.ratio] || fallbackWidth;
+            const projectRatio = project.ratio?.includes(":")
+                ? project.ratio.replace(":", " / ")
+                : "4 / 5";
+
+            return `
                 <div
                     class="project-card"
                     data-project-index="${index}"
@@ -561,6 +619,7 @@ function renderProjects() {
                     aria-label="${project.title}"
                     role="button"
                     tabindex="0"
+                    style="--project-card-width: ${cardWidth}px; --project-ratio: ${projectRatio};"
                 >
                     <div class="project-media">
                         <img src="${project.image}" alt="${project.title}" loading="lazy">
@@ -579,8 +638,8 @@ function renderProjects() {
                         </div>
                     </div>
                 </div>
-            `,
-        )
+            `;
+        })
         .join("");
 
     counter.textContent = `${String(projects.length).padStart(2, "0")} projetos · arraste ou navegue`;

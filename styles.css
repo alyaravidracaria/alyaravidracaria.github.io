@@ -593,6 +593,7 @@ svg {
 
 .projects-track {
     display: flex;
+    align-items: center;
     gap: 24px;
     overflow-x: auto;
     padding-bottom: 1rem;
@@ -601,18 +602,10 @@ svg {
 
 .project-card {
     flex: 0 0 auto;
-    width: 380px;
+    width: var(--project-card-width, 330px);
     text-align: left;
     scroll-snap-align: start;
     cursor: pointer;
-}
-
-.project-card[data-ratio="1:1"] {
-    width: 420px;
-}
-
-.project-card[data-ratio="16:9"] {
-    width: 640px;
 }
 
 .project-media {
@@ -620,15 +613,7 @@ svg {
     overflow: hidden;
     border-radius: var(--radius);
     border: 1px solid rgba(15, 26, 48, 0.1);
-    aspect-ratio: 4 / 5;
-}
-
-.project-card[data-ratio="1:1"] .project-media {
-    aspect-ratio: 1 / 1;
-}
-
-.project-card[data-ratio="16:9"] .project-media {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: var(--project-ratio, 4 / 5);
 }
 
 .project-media img {
@@ -678,8 +663,8 @@ svg {
 }
 
 .project-title {
-    font-size: 22px;
-    line-height: 1.2;
+    font-size: clamp(18px, 1.5vw, 22px);
+    line-height: 1.15;
     color: #fff;
 }
 
@@ -689,6 +674,8 @@ svg {
 }
 
 .project-detail-link {
+    font-size: 10px;
+    letter-spacing: 0.16em;
     color: var(--alyara-accent);
     white-space: nowrap;
     text-decoration: none;
@@ -699,12 +686,22 @@ svg {
     color: #e3f078;
 }
 
+.project-card[data-ratio="9:16"] .project-copy {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+}
+
+.project-card[data-ratio="9:16"] .project-copy-meta {
+    gap: 10px;
+}
+
 .projects-controls {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .projects-counter {
@@ -1549,10 +1546,6 @@ svg {
 }
 
 @media (max-width: 1180px) {
-    .project-card[data-ratio="16:9"] {
-        width: 520px;
-    }
-
     .process-grid {
         gap: 28px;
     }
@@ -1674,10 +1667,8 @@ svg {
         gap: 16px;
     }
 
-    .project-card,
-    .project-card[data-ratio="1:1"],
-    .project-card[data-ratio="16:9"] {
-        width: min(82vw, 380px);
+    .project-card {
+        width: min(82vw, max(280px, var(--project-card-width, 330px)));
     }
 
     .projects-counter {
