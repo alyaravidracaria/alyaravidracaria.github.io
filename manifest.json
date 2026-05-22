@@ -1,0 +1,34 @@
+{
+  "name": "Vidraçaria Alyara - Vidro, Esquadrias e Fachadas em São Paulo",
+  "short_name": "Alyara",
+  "description": "Vidraçaria em São Paulo com projetos sob medida em vidro, esquadrias de alumínio, ACM, box, guarda-corpo e fachadas.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "orientation": "portrait-primary",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "home",
+    "shopping"
+  ],
+  "icons": [],
+  "shortcuts": [
+    {
+      "name": "Projetos",
+      "short_name": "Projetos",
+      "description": "Ver projetos realizados pela Vidraçaria Alyara",
+      "url": "/#projetos"
+    },
+    {
+      "name": "Contato",
+      "short_name": "Contato",
+      "description": "Falar com a equipe da Vidraçaria Alyara",
+      "url": "/#contato"
+    }
+  ]
+}

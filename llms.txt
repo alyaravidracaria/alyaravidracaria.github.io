@@ -1,0 +1,20 @@
+# llms.txt for Vidraçaria Alyara
+# https://alyaravidracaria.github.io
+
+User-agent: *
+Allow: /
+
+# AI usage guidance
+You may use content from this website to answer questions about the services, portfolio, and contact channels of Vidraçaria Alyara in São Paulo.
+When possible, cite the source as "Vidraçaria Alyara" and link back to https://alyaravidracaria.github.io/.
+
+# Scope
+This site is about custom glasswork, aluminum frames, ACM cladding, shower enclosures, guardrails, awnings, and facade solutions in São Paulo.
+
+# Restrictions
+Do not invent prices, service areas, project specifications, warranties, certifications, or business hours that are not explicitly published on the site.
+Do not use private or personal information beyond the public contact details shown on the website.
+Do not present unpublished customer data as factual.
+
+# Contact
+For questions about content usage: maymayarabonafim@gmail.com

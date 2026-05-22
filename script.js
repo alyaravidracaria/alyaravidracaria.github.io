@@ -48,7 +48,7 @@ const projects = [
         caption: "local, Vila Madalena",
         ratio: "4:5",
         image:
-            "./image/Ripado-2.webp",
+            "./image/fachada-de-ripado.webp",
         description:
             "Painel de Ripado em tom amadeirado instalado com estrutura reforçada e acabamentos externos em silicone estrutural. Projeto feito sob medida para o cliente.",
         specs: {
@@ -67,7 +67,7 @@ const projects = [
         caption: "Edifício residencial, Pinheiros",
         ratio: "4:5",
         image:
-            "./image/Guarda-corpo-2.webp",
+            "./image/guarda-corpo-em-vidro-laminado.webp",
         description:
             "Guarda corpo em L, ideal para ambientes internos, dispensa uso de muretas ou paredes, promove segurança  pra você e sua família sem obstruir a vista, toda estrutura fica uniforme e alinhada.",
         specs: {
@@ -86,7 +86,7 @@ const projects = [
         caption: "Residência, Alto de Pinheiros",
         ratio: "9:16",
         image:
-            "./image/box 4.webp",
+            "./image/box-de-correr-ate-o-teto.webp",
         description:
             "Box de correr 2 folhas até o teto, com puxador discreto e kit instalação reforçado,  alumínio preto.",
         specs: {
@@ -105,7 +105,7 @@ const projects = [
         caption: "Comercial, Vila Olímpia",
         ratio: "4:5",
         image:
-            "./image/Ripado-1.webp",
+            "./image/porta-de-entrada-aluminio-ripado.webp",
         description:
             "Painel ripado em alumínio com acabamento amadeirado, fixado em estrutura metálica oculta. Espaçamento técnico calculado para conforto térmico e identidade visual.",
         specs: {
@@ -124,7 +124,7 @@ const projects = [
         caption: "Apartamento, Moema",
         ratio: "4:5",
         image:
-            "./image/box 1.webp",
+            "./image/box-de-correr-2-folhas-ate-o-teto.webp",
         description:
             "Box em vidro temperado com puxador H de 70cm, kit alumínio reforçado. Acabamento em silicone para vedação.",
         specs: {
@@ -143,7 +143,7 @@ const projects = [
         caption: "Loja, Cidade Patriarca SP",
         ratio: "16:9",
         image:
-            "./image/ACM 2.webp",
+            "./image/fachada-em-acm-azul-e-amarelo-vibrante.webp",
         description:
             "Revestimento em ACM 4 mm, estrutura tubular galvanizada oculta. Recortes precisos, juntas alinhadas a régua e acabamento de fresa de 90°.",
         specs: {
@@ -162,7 +162,7 @@ const projects = [
         caption: "Hall social, Higienópolis",
         ratio: "4:5",
         image:
-            "./image/Sacada-1.webp",
+            "./image/porta-integrada-linha-gold-guarda-corpo-de-vidro.webp",
         description:
         "Porta integrada Linha Gold 2 folhas com vidro incolor, a pedido do cliente para fechar o quarto e Guarda corpo peça inteira para segurança sem obstruir a vista.",
         specs: {
@@ -181,7 +181,7 @@ const projects = [
         caption: "Cobertura, Jardins",
         ratio: "4:5",
         image:
-            "./image/Esquadria-4.webp",
+            "./image/projeto-completo-portas-janelas-guarda-corpo-e-mais.webp",
         description:
             "Projeto de casa inteira, com portas e janelas Linha Gold, Guarda corpo e pele de vidro, estrutura reforçada e acabamento de primeira linha. Projeto completo para sacada, com tudo integrado e alinhado.",
         specs: {
@@ -200,7 +200,7 @@ const projects = [
         caption: "Residência, Alto de Pinheiros",
         ratio: "4:5",
         image:
-            "./image/Guarda-corpo-1.webp",
+            "./image/guarda-corpo-protecao-de-escada.webp",
         description:
             "Guarda corpo de vidro temperado 8 mm, com sistema de fixação em torre de inox. Proteção completa para escada, com design moderno e segurança garantida.",
         specs: {
@@ -219,7 +219,7 @@ const projects = [
         caption: "Residência, Alto de Pinheiros",
         ratio: "9:16",
         image:
-            "./image/Box 2.webp",
+            "./image/box-de-correr.webp",
         description:
             " Box de correr com 2 folhas altura padrão de 1,90 m, alumínio preto, design elegante para banheiros simples.",
         specs: {
@@ -238,7 +238,7 @@ const projects = [
         caption: "Residência, Alto de Pinheiros",
         ratio: "12:16",
         image:
-            "./image/Esquadria-2.webp",
+            "./image/janela-de-correr.webp",
         description:
             "Janela de correr 2 folhas linha Gold com vidro incolor, acabamento em alumínio preto. Deslizamento suave e design moderno.",
         specs: {
@@ -257,7 +257,7 @@ const projects = [
         caption: "Residência, Alto de Pinheiros",
         ratio: "4:5",
         image:
-            "./image/Vidro temperado 1.webp",
+            "./image/marquise-de-vidro.webp",
         description:
             "Marquise de vidro temperado, com haste de suporte para fixação. Design elegante e proteção contra intempéries, ideal para varandas e áreas externas.",
         specs: {
@@ -276,7 +276,7 @@ const projects = [
         caption: "Residência, Alto de Pinheiros",
         ratio: "9:16",
         image:
-            "./image/Esquadria-1.webp",
+            "./image/porta-lateral.webp",
         description:
             "Porta de Abrir Linha Suprema com palhetas vazadas e fechadura com chave, ideal para corredores com livre acesso.",
         specs: {
@@ -295,7 +295,7 @@ const projects = [
         caption: "Residência, Alto de Pinheiros",
         ratio: "4:5",
         image:
-            "./image/Vidro temperado 2.webp",
+            "./image/marquise-de-vidro-1.webp",
         description:
             "Marquise de vidro única, com haste de suporte para fixação. Ideal para portas de entrada.",
         specs: {
@@ -314,7 +314,7 @@ const projects = [
         caption: "Residência, Alto de Pinheiros",
         ratio: "9:16",
         image:
-            "./image/box 3.webp",
+            "./image/box-de-3-folhas.webp",
         description:
             "Box de correr com 3 folhas até o teto, puxador H discreto e kit instalação reforçado. Ideal para deixar seu banheiro mais elegante sem sujeira e menos tempo de limpeza.",
         specs: {
@@ -1127,6 +1127,18 @@ function setFooterYear() {
     document.getElementById("footer-year").textContent = new Date().getFullYear();
 }
 
+function registerServiceWorker() {
+    if (!("serviceWorker" in navigator)) {
+        return;
+    }
+
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js?v=1.0").catch(() => {
+            // Silently ignore registration failures to avoid breaking the landing page.
+        });
+    });
+}
+
 function init() {
     hydrateIcons();
     renderTrustItems();
@@ -1144,6 +1156,7 @@ function init() {
     bindMobileMenu();
     bindRevealObserver();
     setFooterYear();
+    registerServiceWorker();
 }
 
 document.addEventListener("DOMContentLoaded", init);
