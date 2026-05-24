@@ -1019,6 +1019,12 @@ function renderFaq() {
             const index = Number(button.dataset.faqIndex);
             state.openFaq = state.openFaq === index ? -1 : index;
             renderFaq();
+            // ADICIONA ISSO:
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'clique_faq',
+            'faq_id': button.getAttribute('data-faq-id')
+
         });
     });
 }
