@@ -1017,7 +1017,18 @@ function renderFaq() {
     container.querySelectorAll("[data-faq-index]").forEach((button) => {
         button.addEventListener("click", () => {
             const index = Number(button.dataset.faqIndex);
+            const wasOpen = state.openFaq === index;
+
             state.openFaq = state.openFaq === index ? -1 : index;
+
+            if (!wasOpen) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    event: "clique_faq",
+                    faq_id: button.getAttribute("data-faq-id"),
+                });
+            }
+
             renderFaq();
         });
     });
