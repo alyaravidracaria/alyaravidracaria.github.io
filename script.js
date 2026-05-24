@@ -695,6 +695,12 @@ function openProjectModal(index) {
     }
 
     state.activeProject = index;
+    // ADICIONA ISSO:
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'evento_modal': 'modal_aberto',
+        'projeto_id': project.id
+    });
 
     document.getElementById("modal-image").src = project.image;
     document.getElementById("modal-image").alt = project.title;
