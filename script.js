@@ -1013,19 +1013,33 @@ function renderFaq() {
             `;
         })
         .join("");
+}
 
-    container.querySelectorAll("[data-faq-index]").forEach((button) => {
-        button.addEventListener("click", () => {
-            const index = Number(button.dataset.faqIndex);
-            state.openFaq = state.openFaq === index ? -1 : index;
-            renderFaq();
-            // ADICIONA ISSO:
+function bindFaq() {
+    const container = document.getElementById("faq-list");
+
+    if (!container) {
+        return;
+    }
+
+    container.addEventListener("click", (event) => {
+        const button = event.target.closest(".faq-toggle");
+
+        if (!button || !container.contains(button)) {
+            return;
+        }
+
+        const index = Number(button.dataset.faqIndex);
+        state.openFaq = state.openFaq === index ? -1 : index;
+        renderFaq();
+
+        // INICIO GTM FAQ
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-            'event': 'clique_faq',
-            'faq_id': button.getAttribute('data-faq-id')
-
+            event: "clique_faq",
+            faq_id: button.getAttribute("data-faq-id"),
         });
+        // FIM GTM FAQ
     });
 }
 
@@ -1157,6 +1171,7 @@ function init() {
     renderReviews();
     renderFaq();
     hydrateIcons();
+    bindFaq();
     bindProjectCarousel();
     bindProjectModal();
     bindReviewControls();
