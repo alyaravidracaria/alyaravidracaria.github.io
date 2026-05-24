@@ -993,7 +993,7 @@ function renderFaq() {
                         type="button"
                         class="faq-toggle"
                         data-faq-index="${index}"
-                        data-faq-id="faq_${index}"
+                        data-faq-id="question-${index}"
                         data-testid="faq-item-${index}"
                         aria-expanded="${isOpen ? "true" : "false"}"
                     >
