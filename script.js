@@ -614,6 +614,7 @@ function renderProjects() {
                 <div
                     class="project-card"
                     data-project-index="${index}"
+                    data-project-id="${project.id}"
                     data-ratio="${project.ratio}"
                     data-testid="project-card-${index}"
                     aria-label="${project.title}"
@@ -873,6 +874,7 @@ function buildAudioPlayer(review) {
                 class="audio-toggle"
                 type="button"
                 data-audio-toggle
+                data-review-index="${state.currentReview}"
                 data-testid="review-audio-play-${state.currentReview}"
                 aria-label="Tocar áudio"
             >
@@ -991,6 +993,7 @@ function renderFaq() {
                         type="button"
                         class="faq-toggle"
                         data-faq-index="${index}"
+                        data-faq-id="faq_${index}"
                         data-testid="faq-item-${index}"
                         aria-expanded="${isOpen ? "true" : "false"}"
                     >
