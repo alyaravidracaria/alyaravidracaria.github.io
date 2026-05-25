@@ -1171,7 +1171,7 @@ function registerServiceWorker() {
     }
 
     window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js?v=1.0").catch(() => {
+        navigator.serviceWorker.register("./sw.js?v=2.0").catch(() => {
             // Silently ignore registration failures to avoid breaking the landing page.
         });
     });
