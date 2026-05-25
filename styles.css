@@ -26,16 +26,26 @@
 
 html {
     scroll-behavior: auto;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
     min-width: 320px;
+    width: 100%;
+    overflow-x: hidden;
     font-family: "Poppins", sans-serif;
     background: var(--alyara-bg);
     color: var(--alyara-light);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body.modal-open {
@@ -1312,6 +1322,7 @@ svg {
 .final-cta {
     padding: 8rem 0;
     overflow: hidden;
+    overflow-x: hidden;
     background: var(--alyara-bg);
 }
 
@@ -1629,6 +1640,14 @@ svg {
 }
 
 @media (max-width: 760px) {
+    html,
+    body,
+    .app {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     .container,
     .final-cta-inner {
         width: min(calc(100% - 2rem), var(--container));
@@ -1678,6 +1697,12 @@ svg {
     .projects-controls {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .trust-grid .trust-item:nth-child(2),
+    .trust-grid .trust-item:nth-child(3),
+    .trust-grid .trust-item:nth-child(5) {
+        display: none;
     }
 
     .spec-grid {
