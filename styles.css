@@ -1652,6 +1652,9 @@ svg {
     .final-cta-inner {
         width: min(calc(100% - 2rem), var(--container));
     }
+    .mobile-menu .alyara-btn-neon {
+        color: var(--alyara-bg-deep);
+    }
 
     .hero-layout {
         padding-top: 6.5rem;
@@ -1664,6 +1667,8 @@ svg {
 
     .hero-copy p {
         font-size: 15.5px;
+        margin-top: 2.75rem;
+        
     }
 
     .hero-floating-tag {
@@ -1671,8 +1676,11 @@ svg {
     }
 
     .scroll-indicator {
-        bottom: 1.25rem;
+        bottom: 0.25rem;
     }
+    .scroll-indicator .line {
+    height: 30px;
+}
 
     .section-head h2,
     .about-copy h2,
@@ -1737,6 +1745,9 @@ svg {
         width: 100%;
     }
 
+    .alyara-btn-ghost {
+        display: none;
+    }
     .hero-actions,
     .final-cta-actions {
         flex-direction: column;
