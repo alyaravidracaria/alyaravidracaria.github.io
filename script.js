@@ -698,7 +698,7 @@ function openProjectModal(index) {
     // ADICIONA ISSO:
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-        'evento_modal': 'modal_aberto',
+        'event': 'modal_aberto',
         'projeto_id': project.id
     });
 
