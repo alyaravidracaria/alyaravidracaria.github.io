@@ -1044,6 +1044,12 @@ svg {
     gap: 3rem;
 }
 
+.reviews-copy,
+.review-card-wrap,
+.review-card {
+    min-width: 0;
+}
+
 .reviews-copy p {
     max-width: 440px;
     margin: 1.1rem 0 0;
@@ -1651,6 +1657,38 @@ svg {
 }
 
 @media (max-width: 760px) {
+    .final-cta h2 {
+        font-size: clamp(2rem, 8vw, 3rem) !important;
+    }
+
+    .final-cta {
+        padding: 4rem 0;
+    }
+
+    .reviews,
+    .reviews-layout,
+    .reviews-copy,
+    .review-card-wrap,
+    .review-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .reviews-copy p,
+    .review-card {
+        max-width: 100%;
+    }
+
+    .reviews-controls,
+    .audio-player {
+        flex-wrap: wrap;
+    }
+
+    .reviews-dots {
+        margin-left: 0;
+    }
+
     .projects {
         padding: calc(var(--section-pad) * 0.5) 0;
     }

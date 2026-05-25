@@ -339,7 +339,7 @@ const processSteps = [
     {
         number: "02",
         icon: "file-search",
-        title: "Envia o projeto ou agendamos visita",
+        title: "Você envia o projeto ou agendamos visita",
         desc: "Medição precisa e alinhamento técnico no local quando necessário.",
     },
     {
