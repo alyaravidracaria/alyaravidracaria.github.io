@@ -779,6 +779,7 @@ svg {
 
 .project-modal-copy {
     min-height: 0;
+    max-height: calc(100vh - 3rem);
     padding: 2.25rem;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -1631,6 +1632,10 @@ svg {
         grid-template-columns: 1fr;
         max-height: calc(100dvh - 2rem);
         height: calc(100dvh - 2rem);
+    }
+
+    .project-modal-copy {
+        max-height: calc(100dvh - 2rem);
     }
 
     .project-modal-image {

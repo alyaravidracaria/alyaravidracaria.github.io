@@ -45,7 +45,7 @@ const projects = [
         id: "p01",
         category: "Fachadas de ripado",
         title: "Fachada de ripado",
-        caption: "local, Vila Madalena",
+        caption: "Aldeia da Serra Condomínio Morada das flores",
         ratio: "4:5",
         image:
             "./image/fachada-de-ripado.webp",
@@ -53,7 +53,7 @@ const projects = [
             "Painel de Ripado em tom amadeirado instalado com estrutura reforçada e acabamentos externos em silicone estrutural. Projeto feito sob medida para o cliente.",
         specs: {
             service: "Fachade de Ripado",
-            thickness: "Perfil de 13mm aproximadamente",
+            thickness: "Perfis de várias medidas, consulte o projeto",
             dimensions: "3,40 m × 8,00 m",
             hardware: "acessórios e acabamento padrão",
             finish: "Em cantoneira e silicone",
@@ -62,16 +62,16 @@ const projects = [
     },
     {
         id: "p02",
-        category: "Guarda corpo de vidro",
+        category: "Guarda corpo de vidro Laminado",
         title: "Guarda corpo em vidro Laminado",
-        caption: "Edifício residencial, Pinheiros",
+        caption: "Aldeia da Serra Condomínio morada das flores",
         ratio: "4:5",
         image:
             "./image/guarda-corpo-em-vidro-laminado.webp",
         description:
             "Guarda corpo em L, ideal para ambientes internos, dispensa uso de muretas ou paredes, promove segurança  pra você e sua família sem obstruir a vista, toda estrutura fica uniforme e alinhada.",
         specs: {
-            service: "Guarda corpo de vidro",
+            service: "Guarda corpo de vidro Laminado",
             thickness: "10mm Laminado",
             dimensions: "h 1,10 m × L 5,20 m",
             hardware: "Torre de inox 40cm + perfil U de acabamento",
@@ -83,7 +83,7 @@ const projects = [
         id: "p03",
         category: "Box de correr",
         title: "Box de correr até o teto",
-        caption: "Residência, Alto de Pinheiros",
+        caption: "Condomínio Tamboré | Alphavile",
         ratio: "9:16",
         image:
             "./image/box-de-correr-ate-o-teto.webp",
@@ -91,10 +91,10 @@ const projects = [
             "Box de correr 2 folhas até o teto, com puxador discreto e kit instalação reforçado,  alumínio preto.",
         specs: {
             service: "Box de correr",
-            thickness: "Vidro  8mm",
+            thickness: "Vidro  8mm + Película de segurança",
             dimensions: "1,60 m × 2,50 m",
             hardware: "Kit instalação reforçado com acessórios de alta qualidade",
-            finish: "Silicone para vedação total",
+            finish: "Silicone para vedação total, puxador de 20mm",
             time: "Instalação em 1h:30min",
         },
     },
@@ -102,7 +102,7 @@ const projects = [
         id: "p04",
         category: "Fachada de Ripado",
         title: "Porta de entrada Alumínio Ripado",
-        caption: "Comercial, Vila Olímpia",
+        caption: "Aldeia da Serra Condomínio Morada das flores",
         ratio: "4:5",
         image:
             "./image/porta-de-entrada-aluminio-ripado.webp",
@@ -110,10 +110,10 @@ const projects = [
             "Painel ripado em alumínio com acabamento amadeirado, fixado em estrutura metálica oculta. Espaçamento técnico calculado para conforto térmico e identidade visual.",
         specs: {
             service: "Alumínio Ripado",
-            thickness: "Perfis de 13 mm aproximadamente e linha Gold",
+            thickness: "Perfis de Várias medidas consulte o projeto",
             dimensions: "1,70 m × 8,00 m",
             hardware: "Estrutura metálica oculta, fechadura eletrônica",
-            finish: "Acabamento em Silicone e ferragens",
+            finish: "Acabamento em Silicone e ferragens de alta qualidade",
             time: "2 dias úteis",
         },
     },
@@ -121,7 +121,7 @@ const projects = [
         id: "p05",
         category: "Box para Banheiro",
         title: "Box de correr 2 folhas até o teto",
-        caption: "Apartamento, Moema",
+        caption: "EDITAR",
         ratio: "4:5",
         image:
             "./image/box-de-correr-2-folhas-ate-o-teto.webp",
@@ -139,13 +139,13 @@ const projects = [
     {
         id: "p06",
         category: "Fachada ACM",
-        title: "Fachada em ACM Azul e amarelo vibrante",
+        title: "Fachada Corporativa em ACM com Iluminação Projetada",
         caption: "Loja, Cidade Patriarca SP",
         ratio: "16:9",
         image:
             "./image/fachada-em-acm-azul-e-amarelo-vibrante.webp",
-        description:
-            "Revestimento em ACM 4 mm, estrutura tubular galvanizada oculta. Recortes precisos, juntas alinhadas a régua e acabamento de fresa de 90°.",
+        description: "Revestimento de fachada  em ACM com foco em durabilidade e impacto visual. Cor azul corporativo, com detalhes e acabamentos em ACM amarelo, criando um contraste moderno e alinhado com a marca. O destaque do projeto foi a integração de um sistema de iluminação externa com projetores de LED de alta potência, instalados para dar destaque total à comunicação visual da empresa durante a noite, ideal para frentes de lojas.",
+            //"Revestimento em ACM 4 mm, estrutura tubular oculta. Recortes precisos, juntas alinhadas a régua e acabamento de fresa de 90°.",// --- IGNORE ---
         specs: {
             service: "Fachada ACM",
             thickness: "Placa 4 mm",
@@ -159,33 +159,33 @@ const projects = [
         id: "p07",
         category: "Esquadrias de alumínio + Sacada",
         title: "Porta integrada Linha Gold + Guarda corpo de vidro",
-        caption: "Hall social, Higienópolis",
+        caption: "Aldeia da Serra Condomínio Morada das flores",
         ratio: "4:5",
         image:
             "./image/porta-integrada-linha-gold-guarda-corpo-de-vidro.webp",
         description:
-        "Porta integrada Linha Gold 2 folhas com vidro incolor, a pedido do cliente para fechar o quarto e Guarda corpo peça inteira para segurança sem obstruir a vista.",
+        "Porta integrada Linha Suprema 2 folhas com vidro incolor, a pedido do cliente para fechar o quarto e Guarda corpo peça inteira para segurança sem obstruir a vista.",
         specs: {
-            service: "Porta integrada Linha Gold",
-            thickness: "8 mm",
+            service: "Porta integrada Linha Suprema",
+            thickness: "8 mm e 10mm G. Corpo",
             dimensions: "2,40 m × 2,20 m (Porta) + 1,20 m × 2,20 m (Guarda corpo)",
             hardware: "Botton em aço inox e parafusos",
             finish: "",
-            time: "5 dias úteis",
+            time: "2 dias úteis",
         },
     },
     {
         id: "p08",
         category: "Esquadrias de Alumínio",
         title: "Projeto completo - Portas, Janelas, Guarda corpo e +",
-        caption: "Cobertura, Jardins",
+        caption: "Aldeia da Serra C. Morada das flores",
         ratio: "4:5",
         image:
             "./image/projeto-completo-portas-janelas-guarda-corpo-e-mais.webp",
         description:
-            "Projeto de casa inteira, com portas e janelas Linha Gold, Guarda corpo e pele de vidro, estrutura reforçada e acabamento de primeira linha. Projeto completo para sacada, com tudo integrado e alinhado.",
+            "Projeto de casa inteira, com portas e janelas Linha Suprema, Guarda corpo com vidro de 10 mm fixado na torre ● Painel de ripado em alumínio amadeirado ● Quadro fixo com vidro laminado refleta panorâmico ● Porta de ripado seguido de Painel ripado em alumínio amadeirado ● Persiana.",
         specs: {
-            service: "Esquadrias + Pele de vidro + Guarda corpo",
+            service: "Esquadrias + Ripado + Guarda corpo",
             thickness: "Vidro temperado 8 mm e 10mm",
             dimensions: "Diversos tamanhos, consulte o projeto",
             hardware: "Acessórios de alta qualidade para esquadrias e pele de vidro",
@@ -197,15 +197,15 @@ const projects = [
         id: "p09",
         category: "Guarda-corpo de vidro",
         title: "Guarda corpo proteção de escada",
-        caption: "Residência, Alto de Pinheiros",
+        caption: "Aldeia da Serra Condomínio Morada das flores",
         ratio: "4:5",
         image:
             "./image/guarda-corpo-protecao-de-escada.webp",
         description:
-            "Guarda corpo de vidro temperado 8 mm, com sistema de fixação em torre de inox. Proteção completa para escada, com design moderno e segurança garantida.",
+            "Guarda corpo de vidro temperado 10 mm, com sistema de fixação em torre de inox. Proteção completa para escada, com design moderno e segurança garantida.",
         specs: {
             service: "Guarda corpo de vidro",
-            thickness: "Vidro temperado 8 mm",
+            thickness: "Vidro temperado 10 mm",
             dimensions: "h 1,10 m × L 4,30 m",
             hardware: "Torre de inox 40cm + perfil U de acabamento",
             finish: "Pintura eletrostática preto fosco",
@@ -216,7 +216,7 @@ const projects = [
         id: "p10",
         category: "Box de vidro",
         title: "Box de correr",
-        caption: "Residência, Alto de Pinheiros",
+        caption: "EDITAR",
         ratio: "9:16",
         image:
             "./image/box-de-correr.webp",
@@ -235,7 +235,7 @@ const projects = [
         id: "p11",
         category: "Esquadria de alumínio",
         title: "Janela de correr",
-        caption: "Residência, Alto de Pinheiros",
+        caption: "Leopoldina, Lapa -SP",
         ratio: "12:16",
         image:
             "./image/janela-de-correr.webp",
@@ -243,7 +243,7 @@ const projects = [
             "Janela de correr 2 folhas linha Gold com vidro incolor, acabamento em alumínio preto. Deslizamento suave e design moderno.",
         specs: {
             service: "Janela de correr Linha Gold",
-            thickness: "Vidro de 6mm",
+            thickness: "Vidro de 8mm",
             dimensions: "1,20 m × 1,20 m",
             hardware: "Roldana de alumínio, fechadura Simples e acessórios de alta qualidade",
             finish: "Vedação com silicone, arremate interno  e cantoneiras para proteção externa",
@@ -254,7 +254,7 @@ const projects = [
         id: "p12",
         category: "Vidro temperado",
         title: "Marquise de vidro",
-        caption: "Residência, Alto de Pinheiros",
+        caption: "EDITAR",
         ratio: "4:5",
         image:
             "./image/marquise-de-vidro.webp",
@@ -273,12 +273,12 @@ const projects = [
         id: "p13",
         category: "Esquadria de alumínio",
         title: "Porta Lateral",
-        caption: "Residência, Alto de Pinheiros",
+        caption: "Jd primavera Francisco morato -SP",
         ratio: "9:16",
         image:
             "./image/porta-lateral.webp",
         description:
-            "Porta de Abrir Linha Suprema com palhetas vazadas e fechadura com chave, ideal para corredores com livre acesso.",
+            "Porta de giro 2 folhas Linha Suprema com palhetas vazadas e fechadura com chave, ideal para corredores com livre acesso.",
         specs: {
             service: "Porta de Abrir Linha Suprema",
             thickness: "Perfil 30 mm",
@@ -292,7 +292,7 @@ const projects = [
         id: "p14",
         category: "Vidro temperado",
         title: "Marquise de vidro",
-        caption: "Residência, Alto de Pinheiros",
+        caption: "EDITAR",
         ratio: "4:5",
         image:
             "./image/marquise-de-vidro-1.webp",
@@ -311,7 +311,7 @@ const projects = [
         id: "p15",
         category: "Box de correr",
         title: "Box de 3 folhas",
-        caption: "Residência, Alto de Pinheiros",
+        caption: "EDITAR",
         ratio: "9:16",
         image:
             "./image/box-de-3-folhas.webp",
