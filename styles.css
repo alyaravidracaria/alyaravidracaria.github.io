@@ -735,6 +735,8 @@ svg {
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
+    overflow: hidden;
+    overscroll-behavior: contain;
 }
 
 .project-modal-backdrop {
@@ -755,6 +757,7 @@ svg {
     overflow: hidden;
     border: 1px solid rgba(134, 185, 215, 0.15);
     background: var(--alyara-bg);
+    overscroll-behavior: contain;
 }
 
 .project-modal-image {
@@ -775,8 +778,10 @@ svg {
 }
 
 .project-modal-copy {
+    min-height: 0;
     padding: 2.25rem;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .project-modal-copy h3 {
@@ -1618,7 +1623,13 @@ svg {
 
     .project-modal-panel {
         grid-template-columns: 1fr;
-        max-height: calc(100vh - 2rem);
+        max-height: calc(100dvh - 2rem);
+        height: calc(100dvh - 2rem);
+    }
+
+    .project-modal-image {
+        flex: 0 0 auto;
+        padding: 1rem 1rem 0;
     }
 
     .project-modal-image img {
@@ -1640,6 +1651,27 @@ svg {
 }
 
 @media (max-width: 760px) {
+    .projects {
+        padding: calc(var(--section-pad) * 0.5) 0;
+    }
+
+    .project-modal {
+        align-items: flex-start;
+        padding: 0.725rem;
+    }
+
+    .project-modal-panel {
+        width: 100%;
+        max-height: calc(100dvh - 1.5rem);
+        height: calc(100dvh - 1.5rem);
+        grid-template-rows: auto minmax(0, 1fr);
+    }
+
+    .project-modal-copy {
+        padding: 1.25rem 1rem 1rem;
+        overflow-y: auto;
+    }
+
     html,
     body,
     .app {
@@ -1687,7 +1719,7 @@ svg {
     .process h2,
     .reviews h2,
     .faq h2 {
-        font-size: clamp(2.35rem, 10vw, 3.2rem);
+        font-size: clamp(1.35rem, 10vw, 3.2rem);
     }
 
     .projects-track {
@@ -1753,11 +1785,17 @@ svg {
         flex-direction: column;
     }
 
-    .trust-grid,
-    .stats-grid {
+    .trust-grid {
         grid-template-columns: 1fr;
     }
 
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .about-media {
+        height: 100%;
+        margin: auto;
+    }
     .faq-toggle {
         padding-inline: 1rem;
     }

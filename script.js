@@ -519,7 +519,26 @@ const state = {
     currentReview: 0,
     openFaq: -1,
     currentAudio: null,
+    lockedScrollY: 0,
 };
+
+function lockBodyScroll() {
+    state.lockedScrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${state.lockedScrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+}
+
+function unlockBodyScroll() {
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    window.scrollTo(0, state.lockedScrollY);
+}
 
 function icon(name, size = 16, extraClass = "", filled = false) {
     const inner = ICONS[name];
@@ -689,6 +708,8 @@ function bindProjectCarousel() {
 
 function openProjectModal(index) {
     const project = projects[index];
+    const modal = document.getElementById("project-modal");
+    const modalCopy = document.querySelector(".project-modal-copy");
 
     if (!project) {
         return;
@@ -731,14 +752,22 @@ function openProjectModal(index) {
         )
         .join("");
 
-    document.getElementById("project-modal").hidden = false;
+    if (modalCopy) {
+        modalCopy.scrollTop = 0;
+    }
+
+    modal.hidden = false;
     document.body.classList.add("modal-open");
+    lockBodyScroll();
 }
 
 function closeProjectModal() {
+    const modal = document.getElementById("project-modal");
+
     state.activeProject = null;
-    document.getElementById("project-modal").hidden = true;
+    modal.hidden = true;
     document.body.classList.remove("modal-open");
+    unlockBodyScroll();
 }
 
 function bindProjectModal() {
