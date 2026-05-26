@@ -121,15 +121,15 @@ const projects = [
         id: "p05",
         category: "Box para Banheiro",
         title: "Box de correr 2 folhas até o teto",
-        caption: "EDITAR",
+        caption: "Residencial reserva da mata Santana do Parnaíba",
         ratio: "4:5",
         image:
             "./image/box-de-correr-2-folhas-ate-o-teto.webp",
         description:
-            "Box em vidro temperado com puxador H de 70cm, kit alumínio reforçado. Acabamento em silicone para vedação.",
+            "Box em vidro temperado com puxador H de 70cm, kit alumínio reforçado alumínio preto.",
         specs: {
             service: "Box de vidro temperado",
-            thickness: "8 mm",
+            thickness: "8 mm + Película de segurança",
             dimensions: "1,80 m × 2,90 m",
             hardware: "Kit de instalação reforçado",
             finish: "Acabaemento em silicone neutro",
@@ -216,7 +216,7 @@ const projects = [
         id: "p10",
         category: "Box de vidro",
         title: "Box de correr",
-        caption: "EDITAR",
+        caption: "Vila dos remédios SP",
         ratio: "9:16",
         image:
             "./image/box-de-correr.webp",
@@ -254,15 +254,15 @@ const projects = [
         id: "p12",
         category: "Vidro temperado",
         title: "Marquise de vidro",
-        caption: "EDITAR",
+        caption: "Vila lobos SP",
         ratio: "4:5",
         image:
             "./image/marquise-de-vidro.webp",
         description:
-            "Marquise de vidro temperado, com haste de suporte para fixação. Design elegante e proteção contra intempéries, ideal para varandas e áreas externas.",
+            "Marquise de vidro laminado e temperado, com haste de suporte para fixação. Design elegante e proteção contra intempéries, ideal para varandas e áreas externas.",
         specs: {
             service: "Vidro temperado para marquise",
-            thickness: "Vidro de 8 mm",
+            thickness: "Laminado temperado5+5",
             dimensions: "1,10 m × 4,00 m",
             hardware: "Sistema de fixação em haste e ferragens de inox",
             finish: "Acabamento em silicone para vedação",
@@ -292,15 +292,15 @@ const projects = [
         id: "p14",
         category: "Vidro temperado",
         title: "Marquise de vidro",
-        caption: "EDITAR",
+        caption: "",
         ratio: "4:5",
         image:
             "./image/marquise-de-vidro-1.webp",
         description:
             "Marquise de vidro única, com haste de suporte para fixação. Ideal para portas de entrada.",
         specs: {
-            service: "Vidro temperado para marquise",
-            thickness: "Vidro de 8 mm",
+            service: "Vidro temperado",
+            thickness: "Laminado temperado 5+5",
             dimensions: "1,10 m × 1,10 m",
             hardware: "Sistema de fixação em haste e ferragens de inox",
             finish: "Acabamento em silicone para vedação",
@@ -311,7 +311,7 @@ const projects = [
         id: "p15",
         category: "Box de correr",
         title: "Box de 3 folhas",
-        caption: "EDITAR",
+        caption: "Residencial 6 Alphavile",
         ratio: "9:16",
         image:
             "./image/box-de-3-folhas.webp",
@@ -319,7 +319,7 @@ const projects = [
             "Box de correr com 3 folhas até o teto, puxador H discreto e kit instalação reforçado. Ideal para deixar seu banheiro mais elegante sem sujeira e menos tempo de limpeza.",
         specs: {
             service: "Box de correr",
-            thickness: "Vidro  8mm",
+            thickness: "Vidro 8mm + Película de segurança",
             dimensions: "1,90 m × 2,50 m",
             hardware: "Kit instalação reforçado com acessórios de alta qualidade",
             finish: "Silicone para vedação total",
