@@ -1175,21 +1175,38 @@ svg {
 }
 
 .audio-wave {
-    display: flex;
-    align-items: end;
-    gap: 3px;
+    --audio-progress: 0%;
+    position: relative;
     height: 28px;
     flex: 1;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: rgba(52, 82, 164, 0.18);
 }
 
-.audio-wave span {
-    width: 3px;
-    border-radius: 1px;
-    background: rgba(15, 26, 48, 0.582);
+.audio-wave::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--audio-progress);
+    background: linear-gradient(
+        90deg,
+        rgba(52, 82, 164, 0.3) 0%,
+        rgba(52, 82, 164, 1) 50%
+    );
 }
 
-.audio-wave span.is-filled {
-    background: var(--alyara-blue-strong);
+.audio-wave.is-playing::before {
+    animation: waveAnimation 0.3s ease;
+}
+
+@keyframes waveAnimation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--audio-progress);
+    }
 }
 
 .audio-duration {

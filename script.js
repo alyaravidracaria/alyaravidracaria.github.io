@@ -463,8 +463,6 @@ const faqs = [
     },
 ];
 
-const waveHeights = Array.from({ length: 32 }, (_, index) => 6 + ((index * 37) % 18));
-
 const ICONS = {
     "arrow-up-right":
         '<path d="M7 17 17 7"></path><path d="M7 7h10v10"></path>',
@@ -527,6 +525,7 @@ const state = {
         scrollAmount: 0,
         maxScrollLeft: 0,
         frameId: null,
+        hasLoadedRemaining: false,
     },
 };
 
@@ -612,6 +611,79 @@ function renderServiceChips() {
         .join("");
 }
 
+function getProjectCardMarkup(project, index) {
+    const projectCardWidths = {
+        "1:1": 360,
+        "4:5": 330,
+        "9:16": 245,
+        "16:9": 520,
+    };
+    const [ratioWidth, ratioHeight] = (project.ratio || "4:5")
+        .split(":")
+        .map((value) => Number(value));
+    const aspectRatio =
+        ratioWidth > 0 && ratioHeight > 0 ? ratioWidth / ratioHeight : 4 / 5;
+    const fallbackWidth = Math.round(
+        Math.max(240, Math.min(520, 410 * aspectRatio)),
+    );
+    const cardWidth = projectCardWidths[project.ratio] || fallbackWidth;
+    const projectRatio = project.ratio?.includes(":")
+        ? project.ratio.replace(":", " / ")
+        : "4 / 5";
+
+    return `
+        <div
+            class="project-card"
+            data-project-index="${index}"
+            data-project-id="${project.id}"
+            data-ratio="${project.ratio}"
+            data-testid="project-card-${index}"
+            aria-label="${project.title}"
+            role="button"
+            tabindex="0"
+            style="--project-card-width: ${cardWidth}px; --project-ratio: ${projectRatio};"
+        >
+            <div class="project-media">
+                <img src="${project.image}" alt="${project.title}" loading="lazy">
+                <div class="project-overlay"></div>
+                <div class="project-badge alyara-glass">
+                    <span class="font-mono-tech">${project.category}</span>
+                </div>
+                <div class="project-copy">
+                    <div class="project-title font-serif-it">${project.title}</div>
+                    <div class="project-copy-meta">
+                        <div class="project-caption font-body">${project.caption}</div>
+                        <a class="project-detail-link font-mono-tech" tabindex="-1" aria-hidden="true">
+                            Detalhe tÃ©cnico
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function bindProjectCards(scope) {
+    scope.querySelectorAll("[data-project-index]").forEach((card) => {
+        if (card.dataset.bound === "true") {
+            return;
+        }
+
+        card.dataset.bound = "true";
+
+        card.addEventListener("click", () => {
+            openProjectModal(Number(card.dataset.projectIndex));
+        });
+
+        card.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openProjectModal(Number(card.dataset.projectIndex));
+            }
+        });
+    });
+}
+
 function renderProjects() {
     const track = document.getElementById("projects-track");
     const counter = document.getElementById("projects-counter");
@@ -686,6 +758,42 @@ function renderProjects() {
     });
 }
 
+function renderProjects() {
+    const track = document.getElementById("projects-track");
+    const counter = document.getElementById("projects-counter");
+    const visibleProjects = projects.slice(0, 4);
+
+    state.projectCarousel.hasLoadedRemaining = projects.length <= visibleProjects.length;
+
+    track.innerHTML = visibleProjects
+        .map((project, index) => getProjectCardMarkup(project, index))
+        .join("");
+
+    counter.textContent = `${String(projects.length).padStart(2, "0")} projetos Â· arraste ou navegue`;
+    bindProjectCards(track);
+}
+
+function loadMoreProjects() {
+    if (state.projectCarousel.hasLoadedRemaining) {
+        return;
+    }
+
+    const track = document.getElementById("projects-track");
+    const remainingProjects = projects.slice(4);
+
+    track.insertAdjacentHTML(
+        "beforeend",
+        remainingProjects
+            .map((project, index) => getProjectCardMarkup(project, index + 4))
+            .join(""),
+    );
+
+    bindProjectCards(track);
+    state.projectCarousel.hasLoadedRemaining = true;
+    measureProjectCarousel();
+    scheduleProjectButtonsUpdate();
+}
+
 function measureProjectCarousel() {
     const { track } = state.projectCarousel;
 
@@ -743,6 +851,7 @@ function bindProjectCarousel() {
     measureProjectCarousel();
     prevButton.addEventListener("click", () => scrollTrack(-1));
     nextButton.addEventListener("click", () => scrollTrack(1));
+    track.addEventListener("scroll", loadMoreProjects, { once: true, passive: true });
     track.addEventListener("scroll", scheduleProjectButtonsUpdate, { passive: true });
     window.addEventListener("resize", handleResize);
     updateProjectButtons();
@@ -957,15 +1066,7 @@ function buildAudioPlayer(review) {
             >
                 ${icon("play", 16, "", true)}
             </button>
-            <div class="audio-wave" data-audio-wave>
-                ${waveHeights
-                    .map(
-                        (height) => `
-                            <span style="height: ${height}px;"></span>
-                        `,
-                    )
-                    .join("")}
-            </div>
+            <div class="audio-wave" data-audio-wave></div>
             <span class="audio-duration font-mono-tech">${review.duration || "—"}</span>
         </div>
     `;
@@ -1033,6 +1134,66 @@ function bindAudioPlayer() {
             button.setAttribute("aria-label", "Áudio indisponível");
         }
     });
+}
+
+function bindAudioPlayer() {
+    const audio = document.querySelector("[data-audio-player]");
+    const button = document.querySelector("[data-audio-toggle]");
+    const wave = document.querySelector("[data-audio-wave]");
+
+    if (!audio || !button || !wave) {
+        return;
+    }
+
+    const updateWave = () => {
+        const progress = audio.duration ? audio.currentTime / audio.duration : 0;
+        wave.style.setProperty("--audio-progress", `${Math.min(progress, 1) * 100}%`);
+    };
+
+    audio.addEventListener("timeupdate", updateWave);
+
+    audio.addEventListener("ended", () => {
+        button.innerHTML = icon("play", 16, "", true);
+        button.setAttribute("aria-label", "Tocar Ã¡udio");
+        state.currentAudio = null;
+        wave.classList.remove("is-playing");
+        updateWave();
+    });
+
+    audio.addEventListener("error", () => {
+        button.disabled = true;
+        button.setAttribute("aria-label", "Ãudio indisponÃ­vel");
+        state.currentAudio = null;
+        wave.classList.remove("is-playing");
+    });
+
+    button.addEventListener("click", async () => {
+        try {
+            if (state.currentAudio && state.currentAudio !== audio) {
+                stopCurrentAudio();
+            }
+
+            if (audio.paused) {
+                await audio.play();
+                state.currentAudio = audio;
+                button.innerHTML = icon("pause", 16, "", true);
+                button.setAttribute("aria-label", "Pausar Ã¡udio");
+                wave.classList.add("is-playing");
+            } else {
+                audio.pause();
+                button.innerHTML = icon("play", 16, "", true);
+                button.setAttribute("aria-label", "Tocar Ã¡udio");
+                state.currentAudio = null;
+                wave.classList.remove("is-playing");
+            }
+        } catch (_error) {
+            button.disabled = true;
+            button.setAttribute("aria-label", "Ãudio indisponÃ­vel");
+            wave.classList.remove("is-playing");
+        }
+    });
+
+    updateWave();
 }
 
 function bindReviewControls() {
@@ -1219,9 +1380,13 @@ function registerServiceWorker() {
     });
 }
 
-function init() {
+function initCritical() {
     hydrateIcons();
     renderTrustItems();
+    hydrateIcons();
+}
+
+function initDeferred() {
     renderServiceChips();
     renderProjects();
     renderProcessSteps();
@@ -1239,4 +1404,5 @@ function init() {
     registerServiceWorker();
 }
 
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", initCritical);
+window.addEventListener("load", initDeferred);
