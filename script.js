@@ -520,6 +520,14 @@ const state = {
     openFaq: -1,
     currentAudio: null,
     lockedScrollY: 0,
+    projectCarousel: {
+        track: null,
+        prevButton: null,
+        nextButton: null,
+        scrollAmount: 0,
+        maxScrollLeft: 0,
+        frameId: null,
+    },
 };
 
 function lockBodyScroll() {
@@ -678,13 +686,37 @@ function renderProjects() {
     });
 }
 
+function measureProjectCarousel() {
+    const { track } = state.projectCarousel;
+
+    if (!track) {
+        return;
+    }
+
+    state.projectCarousel.scrollAmount = track.clientWidth * 0.7;
+    state.projectCarousel.maxScrollLeft = Math.max(track.scrollWidth - track.clientWidth - 8, 0);
+}
+
 function updateProjectButtons() {
-    const track = document.getElementById("projects-track");
-    const prevButton = document.getElementById("projects-prev");
-    const nextButton = document.getElementById("projects-next");
+    const { track, prevButton, nextButton, maxScrollLeft } = state.projectCarousel;
+
+    if (!track || !prevButton || !nextButton) {
+        return;
+    }
 
     prevButton.disabled = track.scrollLeft <= 8;
-    nextButton.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+    nextButton.disabled = track.scrollLeft >= maxScrollLeft;
+}
+
+function scheduleProjectButtonsUpdate() {
+    if (state.projectCarousel.frameId !== null) {
+        return;
+    }
+
+    state.projectCarousel.frameId = window.requestAnimationFrame(() => {
+        state.projectCarousel.frameId = null;
+        updateProjectButtons();
+    });
 }
 
 function bindProjectCarousel() {
@@ -692,17 +724,27 @@ function bindProjectCarousel() {
     const prevButton = document.getElementById("projects-prev");
     const nextButton = document.getElementById("projects-next");
 
+    state.projectCarousel.track = track;
+    state.projectCarousel.prevButton = prevButton;
+    state.projectCarousel.nextButton = nextButton;
+
     const scrollTrack = (direction) => {
         track.scrollBy({
-            left: direction * (track.clientWidth * 0.7),
+            left: direction * state.projectCarousel.scrollAmount,
             behavior: "smooth",
         });
     };
 
+    const handleResize = () => {
+        measureProjectCarousel();
+        scheduleProjectButtonsUpdate();
+    };
+
+    measureProjectCarousel();
     prevButton.addEventListener("click", () => scrollTrack(-1));
     nextButton.addEventListener("click", () => scrollTrack(1));
-    track.addEventListener("scroll", updateProjectButtons, { passive: true });
-    window.addEventListener("resize", updateProjectButtons);
+    track.addEventListener("scroll", scheduleProjectButtonsUpdate, { passive: true });
+    window.addEventListener("resize", handleResize);
     updateProjectButtons();
 }
 

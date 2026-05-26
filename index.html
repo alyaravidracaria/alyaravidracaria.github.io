@@ -26,7 +26,16 @@
     <link rel="canonical" href="https://alyaravidracaria.github.io/">
     <link rel="manifest" href="manifest.json?v=2.0">
     <link rel="preload" href="styles.css?v=2.0" as="style">
-    <link rel="preload" href="image/Hero-section.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="./image/hero-desktop.webp" as="image" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    </noscript>
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Vidraçaria Alyara">
     <meta property="og:title" content="Vidraçaria Alyara | Vidro, Esquadrias de Alumínio e Fachadas em São Paulo">
@@ -81,6 +90,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="#top" class="brand" data-testid="alyara-logo" aria-label="Alyara">
                     <img
                         src="image/logo2-social-alyara.webp"
+                        width="1024"
+                        height="387"
                         alt="Logo Alyara"
                         class="brand-logo"
                     >
@@ -148,10 +159,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 aria-label="Vidraçaria Alyara"
             >
                 <div class="hero-media" aria-hidden="true">
-                    <img
-                        src="./image/Hero-section.webp"
-                        alt=""
-                    >
+                    <picture>
+                        <source
+                            type="image/webp"
+                            srcset="./image/hero-mobile.webp 480w, ./image/hero-tablet.webp 1024w, ./image/hero-desktop.webp 2400w"
+                        >
+                        <img
+                            src="./image/hero-desktop.jpg"
+                            width="2400"
+                            height="1600"
+                            loading="eager"
+                            decoding="async"
+                            fetchpriority="high"
+                            alt=""
+                        >
+                    </picture>
                     <div class="hero-overlay"></div>
                     <div class="hero-grid alyara-tech-grid"></div>
                 </div>
@@ -551,6 +573,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="footer-brand-name font-display">
                             <img
                                 src="image/logo-social-alyara.webp"
+                                width="1024"
+                                height="387"
                                 alt="Logo Alyara"
                                 class="footer-brand-logo"
                             >
