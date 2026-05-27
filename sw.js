@@ -1,9 +1,9 @@
-const CACHE_NAME = "alyara-site-v2.3";
+const CACHE_NAME = "alyara-site-v2.3.1";
 const CORE_ASSETS = [
     "/",
     "/index.html",
-    "/styles.css?v=2.3",
-    "/script.js?v=2.3",
+    "/styles.css?v=2.3.1",
+    "/script.js?v=2.3.1",
     "/robots.txt",
     "/sitemap.xml",
     "/image/fachada-de-ripado.webp",
