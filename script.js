@@ -1406,3 +1406,118 @@ function initDeferred() {
 
 document.addEventListener("DOMContentLoaded", initCritical);
 window.addEventListener("load", initDeferred);
+
+// ============ VERSIONAMENTO E UPDATE ============
+function registerServiceWorkerWithUpdates() {
+    if (!navigator.serviceWorker) return;
+
+    navigator.serviceWorker.register("/sw.js").then((registration) => {
+        let refreshing = false;
+
+        // Detecta quando há uma nova versão pronta
+        registration.addEventListener("updatefound", () => {
+            const newWorker = registration.installing;
+
+            newWorker.addEventListener("statechange", () => {
+                // Novo SW está pronto e não há abas antigas
+                if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+                    showUpdatePrompt(registration);
+                }
+            });
+        });
+
+        // Recarrega quando o SW muda (outro usuário/aba fez update)
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
+            if (!refreshing) {
+                refreshing = true;
+                window.location.reload();
+            }
+        });
+
+        // Verifica atualização a cada 30 segundos
+        setInterval(() => registration.update(), 30000);
+    });
+}
+
+function showUpdatePrompt(registration) {
+    // Cria um modal/prompt customizado
+    const promptDiv = document.createElement("div");
+    promptDiv.id = "update-prompt";
+    promptDiv.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        background: var(--alyara-accent);
+        color: var(--alyara-ink);
+        padding: 16px 24px;
+        border-radius: var(--radius);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        font-family: "Poppins", sans-serif;
+        max-width: 320px;
+        animation: slideInUp 0.3s ease;
+    `;
+
+    promptDiv.innerHTML = `
+        <div style="margin-bottom: 12px; font-weight: 600; font-size: 14px;">
+            ✨ Nova versão disponível!
+        </div>
+        <p style="margin: 8px 0; font-size: 13px; opacity: 0.9;">
+            O site foi atualizado. Deseja baixar a nova versão agora?
+        </p>
+        <div style="display: flex; gap: 8px; margin-top: 12px;">
+            <button id="update-accept" style="
+                flex: 1;
+                padding: 8px 12px;
+                background: var(--alyara-ink);
+                color: var(--alyara-accent);
+                border: none;
+                border-radius: var(--radius);
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 12px;
+            ">Atualizar</button>
+            <button id="update-dismiss" style="
+                flex: 1;
+                padding: 8px 12px;
+                background: rgba(0, 0, 0, 0.2);
+                color: var(--alyara-ink);
+                border: none;
+                border-radius: var(--radius);
+                cursor: pointer;
+                font-size: 12px;
+            ">Depois</button>
+        </div>
+    `;
+
+    document.body.appendChild(promptDiv);
+
+    document.getElementById("update-accept").addEventListener("click", () => {
+        // Ativa o novo SW e recarrega
+        registration.waiting.postMessage({ type: "SKIP_WAITING" });
+        promptDiv.remove();
+    });
+
+    document.getElementById("update-dismiss").addEventListener("click", () => {
+        promptDiv.remove();
+    });
+}
+
+// Inicia o registro do SW com detecção de updates
+registerServiceWorkerWithUpdates();
+
+// Animação de entrada
+const updateStyle = document.createElement("style");
+updateStyle.textContent = `
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+`;
+document.head.appendChild(updateStyle);

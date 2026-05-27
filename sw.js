@@ -1,9 +1,9 @@
-const CACHE_NAME = "alyara-site-v2.0";
+const CACHE_NAME = "alyara-site-v2.2";
 const CORE_ASSETS = [
     "/",
     "/index.html",
-    "/styles.css?v=2.0",
-    "/script.js?v=2.0",
+    "/styles.css?v=2.2",
+    "/script.js?v=2.2",
     "/robots.txt",
     "/sitemap.xml",
     "/image/fachada-de-ripado.webp",
@@ -45,6 +45,12 @@ self.addEventListener("activate", (event) => {
             ),
         ).then(() => self.clients.claim()),
     );
+});
+
+self.addEventListener("message", (event) => {
+    if (event.data?.type === "SKIP_WAITING") {
+        self.skipWaiting();
+    }
 });
 
 self.addEventListener("fetch", (event) => {
