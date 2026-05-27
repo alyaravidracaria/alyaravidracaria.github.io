@@ -1482,7 +1482,7 @@ svg {
 .footer-copy {
     max-width: 400px;
     margin: 1.75rem 0 0;
-    color: rgba(244, 246, 241, 0.55);
+    color: rgb(255, 255, 255);
     font-size: 14px;
     line-height: 1.7;
 }
@@ -1517,7 +1517,7 @@ svg {
 
 .footer-heading {
     margin-bottom: 1.25rem;
-    color: var(--alyara-blue-soft);
+    color: rgb(255, 255, 255);
 }
 
 .footer-links,
@@ -1534,7 +1534,7 @@ svg {
 .footer-links a,
 .footer-contact,
 .footer-contact a {
-    color: rgba(244, 246, 241, 0.65);
+    color: rgb(244, 246, 241);
     font-size: 14px;
     transition: color 0.2s ease;
 }
@@ -1563,12 +1563,12 @@ svg {
     margin-top: 5rem;
     padding-top: 1.75rem;
     border-top: 1px solid rgba(134, 185, 215, 0.15);
-    color: rgba(244, 246, 241, 0.45);
+    color: rgb(244, 246, 241);
 }
 
 .footer-bottom-center {
     text-align: center;
-    color: rgba(244, 246, 241, 0.55);
+    color: rgb(244, 246, 241);
 }
 .cnpj {
     font-size: 13px;
