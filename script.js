@@ -145,7 +145,7 @@ const projects = [
         image:
             "./image/fachada-em-acm-azul-e-amarelo-vibrante.webp",
         description: "Revestimento de fachada  em ACM com foco em durabilidade e impacto visual. Cor azul corporativo, com detalhes e acabamentos em ACM amarelo, criando um contraste moderno e alinhado com a marca. O destaque do projeto foi a integração de um sistema de iluminação externa com projetores de LED de alta potência, instalados para dar destaque total à comunicação visual da empresa durante a noite, ideal para frentes de lojas.",
-            //"Revestimento em ACM 4 mm, estrutura tubular oculta. Recortes precisos, juntas alinhadas a régua e acabamento de fresa de 90°.",// --- IGNORE ---
+        //"Revestimento em ACM 4 mm, estrutura tubular oculta. Recortes precisos, juntas alinhadas a régua e acabamento de fresa de 90°.",// --- IGNORE ---
         specs: {
             service: "Fachada ACM",
             thickness: "Placa 4 mm",
@@ -164,7 +164,7 @@ const projects = [
         image:
             "./image/porta-integrada-linha-gold-guarda-corpo-de-vidro.webp",
         description:
-        "Porta integrada Linha Suprema 2 folhas com vidro incolor, a pedido do cliente para fechar o quarto e Guarda corpo peça inteira para segurança sem obstruir a vista.",
+            "Porta integrada Linha Suprema 2 folhas com vidro incolor, a pedido do cliente para fechar o quarto e Guarda corpo peça inteira para segurança sem obstruir a vista.",
         specs: {
             service: "Porta integrada Linha Suprema",
             thickness: "8 mm e 10mm G. Corpo",
@@ -326,7 +326,7 @@ const projects = [
             time: "Instalação em 1h:30min",
         },
     },
-    
+
 ];
 
 const processSteps = [
@@ -761,11 +761,9 @@ function renderProjects() {
 function renderProjects() {
     const track = document.getElementById("projects-track");
     const counter = document.getElementById("projects-counter");
-    const visibleProjects = projects.slice(0, 4);
+    state.projectCarousel.hasLoadedRemaining = true;
 
-    state.projectCarousel.hasLoadedRemaining = projects.length <= visibleProjects.length;
-
-    track.innerHTML = visibleProjects
+    track.innerHTML = projects
         .map((project, index) => getProjectCardMarkup(project, index))
         .join("");
 
@@ -1006,8 +1004,8 @@ function renderReviews() {
     card.innerHTML = `
         <div class="review-stars">
             ${Array.from({ length: review.rating })
-                .map(() => icon("star", 16, "", true))
-                .join("")}
+            .map(() => icon("star", 16, "", true))
+            .join("")}
             <span class="review-verified font-mono-tech">Cliente verificado</span>
         </div>
         <p class="review-quote font-serif-it">"${review.text}"</p>
@@ -1374,7 +1372,7 @@ function registerServiceWorker() {
     }
 
     window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js?v=2.0").catch(() => {
+        navigator.serviceWorker.register("./sw.js?v=2.3.1").catch(() => {
             // Silently ignore registration failures to avoid breaking the landing page.
         });
     });
@@ -1411,7 +1409,7 @@ window.addEventListener("load", initDeferred);
 function registerServiceWorkerWithUpdates() {
     if (!navigator.serviceWorker) return;
 
-    navigator.serviceWorker.register("/sw.js").then((registration) => {
+    navigator.serviceWorker.register("/sw.js?v=2.3.1").then((registration) => {
         let refreshing = false;
 
         // Detecta quando há uma nova versão pronta
